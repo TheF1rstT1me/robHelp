@@ -46,5 +46,4 @@ while #mainFolder:GetChildren() ~= #instances do
 	task.wait()
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/MainGui.lua", true))()
 print("[ROBHELPER] INSTANCES INITED")
