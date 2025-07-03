@@ -566,6 +566,6 @@ G2L["35"] = Instance.new("UIStroke", G2L["32"]);
 G2L["35"]["Thickness"] = 1.9;
 G2L["35"]["Color"] = Color3.fromRGB(142, 142, 142);
 
-loadstring(game:HttpGet("", true))() -- Bindable Events
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Instances.lua", true))() -- Bindable Events
 
 return G2L["1"], require;
