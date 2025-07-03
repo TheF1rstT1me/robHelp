@@ -80,3 +80,5 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 		RunServiceConnection:Disconnect()
 	end
 end)
+
+print("[ROBHELPER] TOGGLE ANTI-KNOCKBACK INITED")
