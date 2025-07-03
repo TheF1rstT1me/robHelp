@@ -2,11 +2,11 @@ local RS = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
-local PlayerScripts = player:WaitForChild("PlayerScripts")
-local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
+--local PlayerScripts = player:WaitForChild("PlayerScripts")
+--local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
 
-script.Parent = _RobHelperScripts
-script.Name = "Teleport"
+--script.Parent = _RobHelperScripts
+local scriptTo = "Teleport"
 
 local FolderInstances = RS:WaitForChild("_CacheEvents")
 
