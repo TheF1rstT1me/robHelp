@@ -2,10 +2,7 @@ local RS = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
---local PlayerScripts = player:WaitForChild("PlayerScripts")
---local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
 
---script.Parent = _RobHelperScripts
 local scriptTo = "ToggleNoclip"
 
 local camera = game.Workspace.CurrentCamera
