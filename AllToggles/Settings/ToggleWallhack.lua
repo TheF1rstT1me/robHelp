@@ -6,7 +6,7 @@ local player = Players.LocalPlayer
 --local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
 
 --script.Parent = _RobHelperScripts
-local scriptTo =  = "ToggleWallhack"
+local scriptTo = "ToggleWallhack"
 
 local FolderInstances = RS:WaitForChild("_CacheEvents")
 local ToggleChanged = FolderInstances:WaitForChild("ToggleChanged") :: BindableEvent
