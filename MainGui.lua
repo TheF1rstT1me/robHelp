@@ -59,7 +59,7 @@ HideButton.Activated:Connect(function()
 	closeGui()
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Handlers.lua", true))()
+
 
 for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 	if Frame_.Name == "Soon" then continue end;
@@ -91,5 +91,5 @@ end
 
 ShowFrame.Visible = true
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
+
 print("[ROBHELPER] MAIN GUI INITED")
