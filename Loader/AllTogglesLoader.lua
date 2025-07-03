@@ -11,3 +11,5 @@ for _, URL: string in pairs(URLS) do
     loadstring(game:HttpGet(URL, true))()
   --  print("[ROBHELPER] URL INITED!")
 end
+
+print("[ROBHELPER] ALL MODULES INITED")
