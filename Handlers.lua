@@ -17,16 +17,13 @@ local function closeCurrentHandler()
 end
 
 local function openNewHandler(name: string)
-	if currentHandler == HandlerMainContainer:FindFirstChild(name) then
-		closeCurrentHandler()
-		return
-	else
-		if currentHandler then
+	
+	if currentHandler then
+		if currentHandler.Name ~= name then
 			closeCurrentHandler()
-			return
 		end
 	end
-	
+
 	local handler = HandlerMainContainer:FindFirstChild(name)
 	if not handler then return end;
 
