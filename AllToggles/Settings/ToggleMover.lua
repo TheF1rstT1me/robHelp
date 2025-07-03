@@ -47,3 +47,5 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 		hiddenfling = false
 	end
 end)
+
+print("[ROBHELPER] TOGGLE MOVER INITED")
