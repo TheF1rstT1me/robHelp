@@ -7,5 +7,7 @@ local URLS = {
 }
 
 for _, URL: string in pairs(URLS) do
+    print("[ROBHELPER] START INIT: "..URL)
     loadstring(game:HttpGet(URL, true))()
+    print("[ROBHELPER] URL INITED!")
 end
