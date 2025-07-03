@@ -79,12 +79,12 @@ for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 				currentMenuButton.BackgroundColor3 = sourceColor
 				currentMenuButton = Frame_
 				currentMenuButton.BackgroundColor3 = selectedColor
-				FolderInstances.HandlerMoved:Fire(currentMenuButton.Name)
 			else
 				currentMenuButton = Frame_
 				currentMenuButton.BackgroundColor3 = selectedColor
-				FolderInstances.HandlerMoved:Fire(currentMenuButton.Name)
 			end
+				
+			FolderInstances.HandlerMoved:Fire(currentMenuButton.Name)
 		end
 	end)
 end
