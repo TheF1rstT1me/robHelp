@@ -15,3 +15,4 @@ for _, URL: string in pairs(URLS) do
 end
 
 print("[ROBHELPER] MODULES s!")
+print(script.Parent.Name)
