@@ -2,11 +2,11 @@ local RS = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
-local PlayerScripts = player:WaitForChild("PlayerScripts")
-local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
+--local PlayerScripts = player:WaitForChild("PlayerScripts")
+--local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
 
-script.Parent = _RobHelperScripts
-script.Name = "ToggleAntiKnockBack"
+--script.Parent = _RobHelperScripts
+local scriptTo = "ToggleAntiKnockBack"
 
 local FolderInstances = RS:WaitForChild("_CacheEvents")
 local ToggleChanged = FolderInstances:WaitForChild("ToggleChanged") :: BindableEvent
@@ -22,7 +22,7 @@ local RunServiceConnection
 local CharacterConnection
 
 ToggleChanged.Event:Connect(function(toggleName: string, value: boolean) 
-	if toggleName ~= script.Name then return end;
+	if toggleName ~= scriptTo then return end;
 	
 	if value then
 		local character = player.Character or player.CharacterAdded:Wait()
