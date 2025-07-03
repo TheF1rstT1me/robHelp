@@ -136,5 +136,3 @@ GetStateSettingOfFrame.OnInvoke = function(handlerFrame: string, settingType: st
 end
 
 print("[ROBHELPER] TOGGLES GUI INITED")
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
