@@ -17,10 +17,12 @@ local TogglesStates = {}
 local TWEEN_INFO = TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
 
 local ToggleConstants = {
-	["ToggleMover"] = {"ToggleNoclip"},
-	["ToggleNoclip"] = {"ToggleMover"},
+	["ToggleMover"] = {"ToggleNoclip", "ToggleTPTool"},
+	["ToggleNoclip"] = {"ToggleMover", "ToggleTPTool"},
 	["ToggleWallhack"] = {},
-	["ToggleAntiKnockBack"] = {}
+	["ToggleAntiKnockBack"] = {},
+	["ToggleTPTool"] = {"ToggleMover", "ToggleNoclip"},
+	["ToggleResetUnlock"] = {},
 }
 
 local function getToggleCanOn(ToggleFrame: Frame)
