@@ -90,3 +90,5 @@ for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 end
 
 ShowFrame.Visible = true
+
+print("[ROBHELPER] MAIN GUI INITED")
