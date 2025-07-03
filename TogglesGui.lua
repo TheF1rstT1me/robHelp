@@ -20,7 +20,7 @@ local ToggleConstants = {
 	["ToggleMover"] = {"ToggleNoclip"},
 	["ToggleNoclip"] = {"ToggleMover"},
 	["ToggleWallhack"] = {},
-	["ToggleAntiKnockBack"] = {},
+	["ToggleAntiKnockBack"] = {}
 }
 
 local function getToggleCanOn(ToggleFrame: Frame)
@@ -134,5 +134,7 @@ GetStateSettingOfFrame.OnInvoke = function(handlerFrame: string, settingType: st
 	if not types[settingType] then return end;
 	return types[settingType](handlerFrame, settingName)
 end
+
+print("[ROBHELPER] TOGGLES GUI INITED")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
