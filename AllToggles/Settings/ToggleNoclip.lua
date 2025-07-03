@@ -6,7 +6,7 @@ local player = Players.LocalPlayer
 --local _RobHelperScripts = PlayerScripts:WaitForChild("_RobHelperScripts")
 
 --script.Parent = _RobHelperScripts
-local scriptTo =  = "ToggleNoclip"
+local scriptTo = "ToggleNoclip"
 
 local camera = game.Workspace.CurrentCamera
 
