@@ -7,9 +7,11 @@ local URLS = {
 }
 
 for _, URL: string in pairs(URLS) do
-    print("[ROBHELPER] START INIT: "..URL)
-    loadstring(game:HttpGet(URL, true))()
-  --  print("[ROBHELPER] URL INITED!")
+    local s, e = pcall(function()
+	      loadstring(game:HttpGet(URL, true))()
+    end)
+
+    if not s then print(URL) end;
 end
 
 print("[ROBHELPER] ALL MODULES INITED")
