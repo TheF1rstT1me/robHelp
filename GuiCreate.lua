@@ -1017,5 +1017,8 @@ G2L["62"]["Thickness"] = 1.9;
 G2L["62"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Instances.lua", true))() -- Bindable Events
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Handlers.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/TogglesGui.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
 
 return G2L["1"], require;
