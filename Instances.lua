@@ -1,18 +1,32 @@
 local RS = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
 
 local mainFolder = Instance.new("Folder", RS)
 mainFolder.Name = "_CacheEvents"
 
+local twoMainFolder = Instance.new("Folder", Players.LocalPlayer.PlayerScripts)
+twoMainFolder.Name = "_RobHelperScripts"
+
 local instances = {
 	{
 		Type = "BindableEvent",
+		Name = "ToggleChange",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "ToggleChanged",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
 		Name = "HandlerMoved",
-		Parent = game:GetService("ReplicatedStorage"):FindFirstChild("_CacheEvents")
+		Parent = RS:FindFirstChild("_CacheEvents")
 	},
 	{
 		Type = "BindableEvent",
 		Name = "PosMover",
-		Parent = game:GetService("ReplicatedStorage"):FindFirstChild("_CacheEvents")
+		Parent = RS:FindFirstChild("_CacheEvents")
 	}
 }
 
