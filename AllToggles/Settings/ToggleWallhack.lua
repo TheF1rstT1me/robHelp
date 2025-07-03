@@ -55,3 +55,5 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 		highlights = {}
 	end
 end)
+
+print("[ROBHELPER] TOGGLE WALLHACK INITED")
