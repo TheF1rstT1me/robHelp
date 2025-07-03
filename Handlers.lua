@@ -31,8 +31,6 @@ local function openNewHandler(name: string)
 	currentHandler.Visible = true
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/TogglesGui.lua", true))()
-
 for _, handlerFrame: Frame in pairs(HandlerMainContainer:GetChildren()) do
 	if not handlerFrame:IsA("Frame") then continue end;
 	
