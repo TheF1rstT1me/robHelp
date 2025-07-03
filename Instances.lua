@@ -9,6 +9,11 @@ twoMainFolder.Name = "_RobHelperScripts"
 
 local instances = {
 	{
+		Type = "BindableFunction",
+		Name = "GetStateSettingOfFrame",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
 		Type = "BindableEvent",
 		Name = "ToggleChange",
 		Parent = RS:FindFirstChild("_CacheEvents")
