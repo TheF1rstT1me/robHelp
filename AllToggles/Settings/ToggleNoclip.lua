@@ -106,3 +106,6 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 		endFlying(myHRP:FindFirstChild("BodyPosition"), myHRP:FindFirstChild("BodyGyro"))
 	end
 end)
+
+
+print("[ROBHELPER] TOGGLE NOCLIP INITED")
