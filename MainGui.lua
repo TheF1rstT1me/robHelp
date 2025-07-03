@@ -1,7 +1,7 @@
 local RS = game:GetService("ReplicatedStorage")
 local TS = game:GetService("TweenService")
 
-local FolderInstances = RS:FindFirstChild("_CacheEvents")
+local FolderInstances = RS:WaitForChild("_CacheEvents")
 
 local GuiObject = game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("RobHelper")
 local MainFrame = GuiObject:WaitForChild("MainFrame") :: Frame
@@ -59,7 +59,7 @@ HideButton.Activated:Connect(function()
 	closeGui()
 end)
 
--- loadstring HANDLERS
+
 
 for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 	if Frame_.Name == "Soon" then continue end;
@@ -73,7 +73,7 @@ for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 		if currentMenuButton == Frame_ then
 			currentMenuButton = false
 			Frame_.BackgroundColor3 = sourceColor
-			FolderInstances.HandlerMoved:Fire()
+			FolderInstances:WaitForChild("HandlerMoved"):Fire()
 		else
 			if currentMenuButton then
 				currentMenuButton.BackgroundColor3 = sourceColor
@@ -83,11 +83,10 @@ for _, Frame_: Frame in pairs(ListContainer:GetChildren()) do
 				currentMenuButton = Frame_
 				currentMenuButton.BackgroundColor3 = selectedColor
 			end
-				
-			FolderInstances.HandlerMoved:Fire(currentMenuButton.Name)
+			
+			FolderInstances:WaitForChild("HandlerMoved"):Fire(currentMenuButton.Name)
 		end
 	end)
 end
 
 ShowFrame.Visible = true
-
