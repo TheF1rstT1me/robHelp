@@ -91,4 +91,5 @@ end
 
 ShowFrame.Visible = true
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
 print("[ROBHELPER] MAIN GUI INITED")
