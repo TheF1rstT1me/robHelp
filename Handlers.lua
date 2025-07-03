@@ -61,3 +61,5 @@ FolderInstances:WaitForChild("HandlerMoved").Event:Connect(function(handler: str
 	
 	openNewHandler(handler)
 end)
+
+print("[ROBHELPER] HANDLERS INITED")
