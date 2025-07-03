@@ -14,4 +14,4 @@ for _, URL: string in pairs(URLS) do
     if not s then print(URL, e) end;
 end
 
-print("[ROBHELPER] ALL MODULES INITEDыа")
+print("[ROBHELPER] MODULES!")
