@@ -82,3 +82,5 @@ ToggleChange.Event:Connect(function(ToggleFrame: Frame)
 		ToggleToOn(ToggleFrame)
 	end
 end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Loader/AllTogglesLoader.lua", true))()
