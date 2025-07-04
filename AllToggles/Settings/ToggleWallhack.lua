@@ -8,7 +8,7 @@ local scriptTo = "ToggleWallhack"
 local FolderInstances = RS:WaitForChild("_CacheEvents")
 local ToggleChanged = FolderInstances:WaitForChild("ToggleChanged") :: BindableEvent
 local highlights = {}
-local con = false
+local cons = {}
 
 local function CreateHigh(Player: Player)
 	local High = Instance.new("Highlight", Player.Character)
@@ -24,11 +24,6 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 	if toggleName ~= scriptTo then return end;
 	
 	if value then
-		con = Players.PlayerAdded:Connect(function(player: Player) 
-			local char = player.Character or player.CharacterAdded:Wait()
-			CreateHigh(player)
-		end)
-		
 		for _, Player: Player in pairs(Players:GetPlayers()) do
 			if Player == player then continue end;
 			
@@ -42,10 +37,19 @@ ToggleChanged.Event:Connect(function(toggleName: string, value: boolean)
 				end
 				
 				CreateHigh(Player)
+				table.insert(cons, Player.CharacterAdded:Connect(function(char: Model) 
+					CreateHigh(Player)			
+				end))
 			end)
 		end
 	else
-		con:Disconnect()
+		task.spawn(function()	
+			for _, con in pairs(cons) do
+				con:Disconnect()
+			end
+			cons = {}
+		end)
+			
 		for _, high in pairs(highlights) do
 			high:Destroy()
 		end
