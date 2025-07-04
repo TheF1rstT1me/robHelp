@@ -16,9 +16,19 @@ local MainHandler = HandlerMainContainer:WaitForChild("MainCharacter")
 local WalkSpeedFrame = MainHandler:WaitForChild("WalkSpeed")
 local JumpHeightFrame = MainHandler:WaitForChild("JumpHeight")
 local TeleportFrame = MainHandler:WaitForChild("TeleportToPlayer")
+local FlingFrame = MainHandler:WaitForChild("FlingAllPlayers")
 local NextPageFrame = MainHandler:WaitForChild("NextPage")
 
+local runServiceConnect = false
+local FlingActive, FlingCoro = false, false
+local OldPos = nil
+local FPDH = workspace.FallenPartsDestroyHeight
+
 local humanoid = player.Character and (player.Character:WaitForChild("Humanoid")) or (player.CharacterAdded:Wait():WaitForChild("Humanoid")) :: Humanoid
+
+WalkSpeedFrame.Count.TextLabel.Text = tostring(humanoid.WalkSpeed)
+JumpHeightFrame.Count.TextLabel.Text = tostring(math.round(humanoid.JumpHeight))
+
 player.CharacterAdded:Connect(function(character: Model) 
 	humanoid = character:WaitForChild("Humanoid")
 	humanoid.WalkSpeed = tonumber(WalkSpeedFrame.Count.TextLabel.Text)
@@ -62,6 +72,68 @@ TeleportFrame.Box.TextBox.FocusLost:Connect(function(enterPressed: boolean)
 	end
 end)
 
-WalkSpeedFrame.Count.TextLabel.Text = tostring(humanoid.WalkSpeed)
-JumpHeightFrame.Count.TextLabel.Text = tostring(math.round(humanoid.JumpHeight))
+local function Message(Title, Text, Time)
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = Title,
+		Text = Text,
+		Duration = Time or 5
+	})
+end
 
+local function SkidFling(TargetPlayer)
+	local Character = player.Character
+	if not Character then return end;
+	
+	local Humanoid = Character:WaitForChild("Humanoid")
+	local RootPart = Character:WaitForChild("HumanoidRootPart")
+	local TCharacter = TargetPlayer.Character
+	
+	if not TCharacter then return end
+	if TCharacter.Humanoid.FloorMaterial == Enum.Material.Air then return end;
+	
+	local OldPos = Character:GetPivot()
+	
+	while TCharacter.Humanoid.FloorMaterial ~= Enum.Material.Air do
+		if not TCharacter or not Character then break end;
+		
+		local PivotTarget = TCharacter:GetPivot()
+		Character:PivotTo(CFrame.new(PivotTarget.Position))
+		task.wait(.1)
+	end
+	
+	if Humanoid.FloorMaterial == Enum.Material.Air then
+		Character:PivotTo(OldPos)
+	end
+end
+
+FlingFrame.StartButton.Init.Activated:Connect(function()
+	if FlingActive then return end;
+	FlingActive = true
+	
+	runServiceConnect = RunService.Heartbeat:Connect(function(deltaTime)
+		if not player.Character then return end
+		local currentCFrame = player.Character:GetPivot()
+		local newRotation = currentCFrame * CFrame.Angles(0, 10 * deltaTime, 10 * deltaTime)
+		player.Character:PivotTo(CFrame.new(currentCFrame.Position) * newRotation.Rotation)
+	end)
+	
+	FlingCoro = coroutine.create(function()
+		while FlingActive do
+			for _, Player: Player in pairs(Players:GetPlayers()) do
+				if Player == player then continue end;
+				SkidFling(Player)
+				task.wait(.5)
+			end
+		end
+		
+		FlingCoro = false
+	end)
+	coroutine.resume(FlingCoro)
+end)
+
+FlingFrame.StopButton.Init.Activated:Connect(function()
+	if not FlingActive then return end;
+	FlingActive = false
+	runServiceConnect:Disconnect()
+	runServiceConnect = false
+end)
