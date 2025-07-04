@@ -17,7 +17,7 @@ local TogglesStates = {}
 local TWEEN_INFO = TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
 
 local ToggleConstants = {
-	["ToggleMover"] = {"ToggleNoclip", "ToggleTPTool"},
+	["ToggleMover"] = {"ToggleNoclip"},
 	["ToggleNoclip"] = {"ToggleMover", "ToggleTPTool"},
 	["ToggleWallhack"] = {},
 	["ToggleAntiKnockBack"] = {},
