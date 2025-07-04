@@ -25,6 +25,7 @@ local ToggleConstants = {
 	["ToggleResetUnlock"] = {},
 	["TogglePlaying"] = {},
 	["ToggleLoop"] = {},
+	["ToggleBackpackUnlock"] = {},
 }
 
 local function getToggleCanOn(ToggleFrame: Frame)
