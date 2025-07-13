@@ -1,5 +1,6 @@
 local RS = game:GetService("ReplicatedStorage")
 local HttpService = game:GetService("HttpService")
+local Chat = game:GetService("Chat")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
