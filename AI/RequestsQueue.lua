@@ -65,7 +65,11 @@ function SendToGemini(tableRequest: {string})
 	end)
 	
 	if success then
-		print("Ответ:", response)
+		local responsed = HttpService:JSONDecode(response)
+		local textToChat = responsed.candidates.parts[0].text
+		print("Ответ:", textToChat)
+		
+		Chat:Chat(player.Character.Head, textToChat, Enum.ChatColor.White)
 	else
 		warn("Ошибка:", response)
 	end
