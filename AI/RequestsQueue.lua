@@ -35,19 +35,13 @@ function SendToGemini(tableRequest: {string})
 		contents = {
 			parts = {
 				{
-					role = "user",
 					text = prompt
 				}
-			}
+			},
+			role = "user"
 		},
 		generationConfig = {
 			temperature = 1
-		},
-		safetySettings = {
-			{
-				category = "HATE_SPEECH",
-				threshold = "BLOCK_NONE"
-			}
 		},
 		systemInstruction = {
 			parts = {
