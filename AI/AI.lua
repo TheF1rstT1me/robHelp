@@ -23,8 +23,8 @@ local AIPage = HandlerMainContainer:WaitForChild("AI")
 local AIpromptPage = HandlerMainContainer:WaitForChild("AIprompt")
 local AIpanelPage = HandlerMainContainer:WaitForChild("AIpanel")
 
-local systeminstBox = AIPage:WaitForChild("Box").TextBox :: TextBox
-local promptBox = AIpromptPage:WaitForChild("Box").TextBox :: TextBox
+local systeminstBox = AIPage:WaitForChild("Role").Box.TextBox :: TextBox
+local promptBox = AIpromptPage:WaitForChild("Prompt").Box.TextBox :: TextBox
 local sendPromptButton = AIpanelPage:WaitForChild("PromptButton") :: TextButton
 
 local PreviousPageAIPrompt = AIpromptPage:WaitForChild("PreviousPage")
