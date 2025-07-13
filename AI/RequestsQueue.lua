@@ -1,6 +1,6 @@
 local RS = game:GetService("ReplicatedStorage")
 local HttpService = game:GetService("HttpService")
-local Chat = game:GetService("Chat")
+local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
@@ -66,11 +66,12 @@ function SendToGemini(tableRequest: {string})
 	end)
 	
 	if success then
+		local channel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral") :: TextChannel
 		local responsed = HttpService:JSONDecode(response)
 		local textToChat = responsed.candidates[1].content.parts[1].text
 		print("Ответ:", textToChat)
 		
-		Chat:Chat(player.Character.Head, textToChat, Enum.ChatColor.White)
+		channel:SendAsync(textToChat)
 	else
 		warn("Ошибка:", response)
 	end
