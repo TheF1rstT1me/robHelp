@@ -14,6 +14,11 @@ local instances = {
 		Parent = RS:FindFirstChild("_CacheEvents")
 	},
 	{
+		Type = "BindableFunction",
+		Name = "RequestsIsEmpty",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
 		Type = "BindableEvent",
 		Name = "ToggleChange",
 		Parent = RS:FindFirstChild("_CacheEvents")
@@ -21,6 +26,21 @@ local instances = {
 	{
 		Type = "BindableEvent",
 		Name = "ToggleChanged",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "AIGemini",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "SendRequest",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "RequestsEmpty",
 		Parent = RS:FindFirstChild("_CacheEvents")
 	},
 	{
