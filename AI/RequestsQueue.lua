@@ -71,7 +71,7 @@ function SendToGemini(tableRequest: {string})
 		local textToChat = responsed.candidates[1].content.parts[1].text
 		print("Ответ:", textToChat)
 		
-		channel:SendAsync(textToChat.." le le le")
+		channel:SendAsync(textToChat.." lelo le le le le")
 	else
 		warn("Ошибка:", response)
 	end
