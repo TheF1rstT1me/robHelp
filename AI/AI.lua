@@ -57,7 +57,7 @@ NextPageAIPrompt.Init.Activated:Connect(function()
 end)
 
 sendPromptButton.Init.Activated:Connect(function()
-	if sendPromptButton.Text == sendPromptButtonTextLabelStates[2] or sendPromptButton.Text == sendPromptButtonTextLabelStates[3] then return end;
+	if sendPromptButton.TextLabel.Text == sendPromptButtonTextLabelStates[2] or sendPromptButton.TextLabel.Text == sendPromptButtonTextLabelStates[3] then return end;
 	if not RequestsIsEmpty:Invoke() then sendPromptButton.TextLabel.Text = sendPromptButtonTextLabelStates[3] return end;
 	sendPromptButton.TextLabel.Text = sendPromptButtonTextLabelStates[3]
 	SendRequest:Fire(system_instruction, gemini_model, prompt)
