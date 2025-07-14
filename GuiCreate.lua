@@ -7,17 +7,17 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 269 | Scripts: 0 | Modules: 0 | Tags: 0
+-- Instances: 276 | Scripts: 0 | Modules: 0 | Tags: 0
 local G2L = {};
 
--- StarterGui.RobHelper
+-- Teams.RobHelper
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[RobHelper]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.RobHelper.MainFrame
+-- Teams.RobHelper.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["Visible"] = false;
 G2L["2"]["BorderSizePixel"] = 0;
@@ -29,7 +29,7 @@ G2L["2"]["Name"] = [[MainFrame]];
 G2L["2"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer
+-- Teams.RobHelper.MainFrame.ListContainer
 G2L["3"] = Instance.new("Frame", G2L["2"]);
 G2L["3"]["ZIndex"] = 2;
 G2L["3"]["BorderSizePixel"] = 0;
@@ -41,7 +41,7 @@ G2L["3"]["Name"] = [[ListContainer]];
 G2L["3"]["BackgroundTransparency"] = 0.3;
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.UIListLayout
+-- Teams.RobHelper.MainFrame.ListContainer.UIListLayout
 G2L["4"] = Instance.new("UIListLayout", G2L["3"]);
 G2L["4"]["Wraps"] = true;
 G2L["4"]["Padding"] = UDim.new(0.06, 0);
@@ -50,13 +50,13 @@ G2L["4"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 G2L["4"]["FillDirection"] = Enum.FillDirection.Horizontal;
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.UIStroke
+-- Teams.RobHelper.MainFrame.ListContainer.UIStroke
 G2L["5"] = Instance.new("UIStroke", G2L["3"]);
 G2L["5"]["Thickness"] = 1.9;
 G2L["5"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Settings
+-- Teams.RobHelper.MainFrame.ListContainer.Settings
 G2L["6"] = Instance.new("Frame", G2L["3"]);
 G2L["6"]["BorderSizePixel"] = 0;
 G2L["6"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -66,12 +66,12 @@ G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Name"] = [[Settings]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Settings.UICorner
+-- Teams.RobHelper.MainFrame.ListContainer.Settings.UICorner
 G2L["7"] = Instance.new("UICorner", G2L["6"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Settings.TextLabel
+-- Teams.RobHelper.MainFrame.ListContainer.Settings.TextLabel
 G2L["8"] = Instance.new("TextLabel", G2L["6"]);
 G2L["8"]["TextWrapped"] = true;
 G2L["8"]["BorderSizePixel"] = 0;
@@ -87,7 +87,7 @@ G2L["8"]["Text"] = [[Settings]];
 G2L["8"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Settings.Init
+-- Teams.RobHelper.MainFrame.ListContainer.Settings.Init
 G2L["9"] = Instance.new("ImageButton", G2L["6"]);
 G2L["9"]["BorderSizePixel"] = 0;
 G2L["9"]["ImageTransparency"] = 1;
@@ -100,13 +100,13 @@ G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.UIPadding
+-- Teams.RobHelper.MainFrame.ListContainer.UIPadding
 G2L["a"] = Instance.new("UIPadding", G2L["3"]);
 G2L["a"]["PaddingRight"] = UDim.new(0.05, 0);
 G2L["a"]["PaddingLeft"] = UDim.new(0.05, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Teleport
+-- Teams.RobHelper.MainFrame.ListContainer.Teleport
 G2L["b"] = Instance.new("Frame", G2L["3"]);
 G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -116,12 +116,12 @@ G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["Name"] = [[Teleport]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Teleport.UICorner
+-- Teams.RobHelper.MainFrame.ListContainer.Teleport.UICorner
 G2L["c"] = Instance.new("UICorner", G2L["b"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Teleport.TextLabel
+-- Teams.RobHelper.MainFrame.ListContainer.Teleport.TextLabel
 G2L["d"] = Instance.new("TextLabel", G2L["b"]);
 G2L["d"]["TextWrapped"] = true;
 G2L["d"]["BorderSizePixel"] = 0;
@@ -137,7 +137,7 @@ G2L["d"]["Text"] = [[Teleport]];
 G2L["d"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Teleport.Init
+-- Teams.RobHelper.MainFrame.ListContainer.Teleport.Init
 G2L["e"] = Instance.new("ImageButton", G2L["b"]);
 G2L["e"]["BorderSizePixel"] = 0;
 G2L["e"]["ImageTransparency"] = 1;
@@ -150,7 +150,7 @@ G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.MainCharacter
+-- Teams.RobHelper.MainFrame.ListContainer.MainCharacter
 G2L["f"] = Instance.new("Frame", G2L["3"]);
 G2L["f"]["BorderSizePixel"] = 0;
 G2L["f"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -160,12 +160,12 @@ G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f"]["Name"] = [[MainCharacter]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.MainCharacter.UICorner
+-- Teams.RobHelper.MainFrame.ListContainer.MainCharacter.UICorner
 G2L["10"] = Instance.new("UICorner", G2L["f"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.MainCharacter.TextLabel
+-- Teams.RobHelper.MainFrame.ListContainer.MainCharacter.TextLabel
 G2L["11"] = Instance.new("TextLabel", G2L["f"]);
 G2L["11"]["TextWrapped"] = true;
 G2L["11"]["BorderSizePixel"] = 0;
@@ -181,7 +181,7 @@ G2L["11"]["Text"] = [[Character]];
 G2L["11"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.MainCharacter.Init
+-- Teams.RobHelper.MainFrame.ListContainer.MainCharacter.Init
 G2L["12"] = Instance.new("ImageButton", G2L["f"]);
 G2L["12"]["BorderSizePixel"] = 0;
 G2L["12"]["ImageTransparency"] = 1;
@@ -194,7 +194,7 @@ G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.AI
+-- Teams.RobHelper.MainFrame.ListContainer.AI
 G2L["13"] = Instance.new("Frame", G2L["3"]);
 G2L["13"]["BorderSizePixel"] = 0;
 G2L["13"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -204,12 +204,12 @@ G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["13"]["Name"] = [[AI]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.AI.UICorner
+-- Teams.RobHelper.MainFrame.ListContainer.AI.UICorner
 G2L["14"] = Instance.new("UICorner", G2L["13"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.AI.TextLabel
+-- Teams.RobHelper.MainFrame.ListContainer.AI.TextLabel
 G2L["15"] = Instance.new("TextLabel", G2L["13"]);
 G2L["15"]["TextWrapped"] = true;
 G2L["15"]["BorderSizePixel"] = 0;
@@ -225,7 +225,7 @@ G2L["15"]["Text"] = [[AI TROLL]];
 G2L["15"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.AI.Init
+-- Teams.RobHelper.MainFrame.ListContainer.AI.Init
 G2L["16"] = Instance.new("ImageButton", G2L["13"]);
 G2L["16"]["BorderSizePixel"] = 0;
 G2L["16"]["ImageTransparency"] = 1;
@@ -238,7 +238,7 @@ G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["16"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Soon
+-- Teams.RobHelper.MainFrame.ListContainer.Soon
 G2L["17"] = Instance.new("Frame", G2L["3"]);
 G2L["17"]["BorderSizePixel"] = 0;
 G2L["17"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -249,12 +249,12 @@ G2L["17"]["Name"] = [[Soon]];
 G2L["17"]["BackgroundTransparency"] = 0.45;
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Soon.UICorner
+-- Teams.RobHelper.MainFrame.ListContainer.Soon.UICorner
 G2L["18"] = Instance.new("UICorner", G2L["17"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Soon.TextLabel
+-- Teams.RobHelper.MainFrame.ListContainer.Soon.TextLabel
 G2L["19"] = Instance.new("TextLabel", G2L["17"]);
 G2L["19"]["TextWrapped"] = true;
 G2L["19"]["BorderSizePixel"] = 0;
@@ -270,7 +270,7 @@ G2L["19"]["Text"] = [[Soon]];
 G2L["19"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.ListContainer.Soon.Init
+-- Teams.RobHelper.MainFrame.ListContainer.Soon.Init
 G2L["1a"] = Instance.new("ImageButton", G2L["17"]);
 G2L["1a"]["BorderSizePixel"] = 0;
 G2L["1a"]["ImageTransparency"] = 1;
@@ -283,7 +283,7 @@ G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer
+-- Teams.RobHelper.MainFrame.MainContainer
 G2L["1b"] = Instance.new("Frame", G2L["2"]);
 G2L["1b"]["BorderSizePixel"] = 0;
 G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(40, 40, 40);
@@ -294,12 +294,12 @@ G2L["1b"]["Name"] = [[MainContainer]];
 G2L["1b"]["BackgroundTransparency"] = 0.05;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.UICorner
 G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
 G2L["1c"]["CornerRadius"] = UDim.new(0.1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer
 G2L["1d"] = Instance.new("Frame", G2L["1b"]);
 G2L["1d"]["BorderSizePixel"] = 0;
 G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -310,7 +310,7 @@ G2L["1d"]["Name"] = [[HandlerMainContainer]];
 G2L["1d"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings
 G2L["1e"] = Instance.new("Frame", G2L["1d"]);
 G2L["1e"]["Visible"] = false;
 G2L["1e"]["BorderSizePixel"] = 0;
@@ -322,7 +322,7 @@ G2L["1e"]["Name"] = [[Settings]];
 G2L["1e"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.UIListLayout
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.UIListLayout
 G2L["1f"] = Instance.new("UIListLayout", G2L["1e"]);
 G2L["1f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 G2L["1f"]["Wraps"] = true;
@@ -331,7 +331,7 @@ G2L["1f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 G2L["1f"]["FillDirection"] = Enum.FillDirection.Horizontal;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover
 G2L["20"] = Instance.new("Frame", G2L["1e"]);
 G2L["20"]["BorderSizePixel"] = 0;
 G2L["20"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -341,12 +341,12 @@ G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["20"]["Name"] = [[ToggleMover]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.UICorner
 G2L["21"] = Instance.new("UICorner", G2L["20"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.TextLabel
 G2L["22"] = Instance.new("TextLabel", G2L["20"]);
 G2L["22"]["TextWrapped"] = true;
 G2L["22"]["BorderSizePixel"] = 0;
@@ -363,7 +363,7 @@ G2L["22"]["Text"] = [[Touch Fling (ur character must have touches a flinging pla
 G2L["22"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle
 G2L["23"] = Instance.new("Frame", G2L["20"]);
 G2L["23"]["BorderSizePixel"] = 0;
 G2L["23"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -373,12 +373,12 @@ G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["23"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.UICorner
 G2L["24"] = Instance.new("UICorner", G2L["23"]);
 G2L["24"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Dot
 G2L["25"] = Instance.new("Frame", G2L["23"]);
 G2L["25"]["BorderSizePixel"] = 0;
 G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -389,12 +389,12 @@ G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["25"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Dot.UICorner
 G2L["26"] = Instance.new("UICorner", G2L["25"]);
 G2L["26"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleMover.Toggle.Init
 G2L["27"] = Instance.new("TextButton", G2L["23"]);
 G2L["27"]["BorderSizePixel"] = 0;
 G2L["27"]["TextTransparency"] = 1;
@@ -409,7 +409,7 @@ G2L["27"]["Text"] = [[]];
 G2L["27"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack
 G2L["28"] = Instance.new("Frame", G2L["1e"]);
 G2L["28"]["BorderSizePixel"] = 0;
 G2L["28"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -419,12 +419,12 @@ G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["28"]["Name"] = [[ToggleWallhack]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.UICorner
 G2L["29"] = Instance.new("UICorner", G2L["28"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.TextLabel
 G2L["2a"] = Instance.new("TextLabel", G2L["28"]);
 G2L["2a"]["TextWrapped"] = true;
 G2L["2a"]["BorderSizePixel"] = 0;
@@ -441,7 +441,7 @@ G2L["2a"]["Text"] = [[WallHack]];
 G2L["2a"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle
 G2L["2b"] = Instance.new("Frame", G2L["28"]);
 G2L["2b"]["BorderSizePixel"] = 0;
 G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -451,12 +451,12 @@ G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2b"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.UICorner
 G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
 G2L["2c"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Dot
 G2L["2d"] = Instance.new("Frame", G2L["2b"]);
 G2L["2d"]["BorderSizePixel"] = 0;
 G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -467,12 +467,12 @@ G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2d"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Dot.UICorner
 G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
 G2L["2e"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleWallhack.Toggle.Init
 G2L["2f"] = Instance.new("TextButton", G2L["2b"]);
 G2L["2f"]["BorderSizePixel"] = 0;
 G2L["2f"]["TextTransparency"] = 1;
@@ -487,7 +487,7 @@ G2L["2f"]["Text"] = [[]];
 G2L["2f"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack
 G2L["30"] = Instance.new("Frame", G2L["1e"]);
 G2L["30"]["BorderSizePixel"] = 0;
 G2L["30"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -497,12 +497,12 @@ G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["30"]["Name"] = [[ToggleAntiKnockBack]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.UICorner
 G2L["31"] = Instance.new("UICorner", G2L["30"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.TextLabel
 G2L["32"] = Instance.new("TextLabel", G2L["30"]);
 G2L["32"]["TextWrapped"] = true;
 G2L["32"]["BorderSizePixel"] = 0;
@@ -519,7 +519,7 @@ G2L["32"]["Text"] = [[Anti-Knockback]];
 G2L["32"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle
 G2L["33"] = Instance.new("Frame", G2L["30"]);
 G2L["33"]["BorderSizePixel"] = 0;
 G2L["33"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -529,12 +529,12 @@ G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["33"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.UICorner
 G2L["34"] = Instance.new("UICorner", G2L["33"]);
 G2L["34"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Dot
 G2L["35"] = Instance.new("Frame", G2L["33"]);
 G2L["35"]["BorderSizePixel"] = 0;
 G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -545,12 +545,12 @@ G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["35"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Dot.UICorner
 G2L["36"] = Instance.new("UICorner", G2L["35"]);
 G2L["36"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleAntiKnockBack.Toggle.Init
 G2L["37"] = Instance.new("TextButton", G2L["33"]);
 G2L["37"]["BorderSizePixel"] = 0;
 G2L["37"]["TextTransparency"] = 1;
@@ -565,7 +565,7 @@ G2L["37"]["Text"] = [[]];
 G2L["37"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip
 G2L["38"] = Instance.new("Frame", G2L["1e"]);
 G2L["38"]["BorderSizePixel"] = 0;
 G2L["38"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -575,12 +575,12 @@ G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["38"]["Name"] = [[ToggleNoclip]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.UICorner
 G2L["39"] = Instance.new("UICorner", G2L["38"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.TextLabel
 G2L["3a"] = Instance.new("TextLabel", G2L["38"]);
 G2L["3a"]["TextWrapped"] = true;
 G2L["3a"]["BorderSizePixel"] = 0;
@@ -597,7 +597,7 @@ G2L["3a"]["Text"] = [[Noclip]];
 G2L["3a"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle
 G2L["3b"] = Instance.new("Frame", G2L["38"]);
 G2L["3b"]["BorderSizePixel"] = 0;
 G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -607,12 +607,12 @@ G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3b"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.UICorner
 G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
 G2L["3c"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Dot
 G2L["3d"] = Instance.new("Frame", G2L["3b"]);
 G2L["3d"]["BorderSizePixel"] = 0;
 G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -623,12 +623,12 @@ G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3d"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Dot.UICorner
 G2L["3e"] = Instance.new("UICorner", G2L["3d"]);
 G2L["3e"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleNoclip.Toggle.Init
 G2L["3f"] = Instance.new("TextButton", G2L["3b"]);
 G2L["3f"]["BorderSizePixel"] = 0;
 G2L["3f"]["TextTransparency"] = 1;
@@ -643,7 +643,7 @@ G2L["3f"]["Text"] = [[]];
 G2L["3f"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool
 G2L["40"] = Instance.new("Frame", G2L["1e"]);
 G2L["40"]["BorderSizePixel"] = 0;
 G2L["40"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -653,12 +653,12 @@ G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["40"]["Name"] = [[ToggleTPTool]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.UICorner
 G2L["41"] = Instance.new("UICorner", G2L["40"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.TextLabel
 G2L["42"] = Instance.new("TextLabel", G2L["40"]);
 G2L["42"]["TextWrapped"] = true;
 G2L["42"]["BorderSizePixel"] = 0;
@@ -675,7 +675,7 @@ G2L["42"]["Text"] = [[Tp Tool (With click & tap)]];
 G2L["42"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle
 G2L["43"] = Instance.new("Frame", G2L["40"]);
 G2L["43"]["BorderSizePixel"] = 0;
 G2L["43"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -685,12 +685,12 @@ G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["43"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.UICorner
 G2L["44"] = Instance.new("UICorner", G2L["43"]);
 G2L["44"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Dot
 G2L["45"] = Instance.new("Frame", G2L["43"]);
 G2L["45"]["BorderSizePixel"] = 0;
 G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -701,12 +701,12 @@ G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["45"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Dot.UICorner
 G2L["46"] = Instance.new("UICorner", G2L["45"]);
 G2L["46"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleTPTool.Toggle.Init
 G2L["47"] = Instance.new("TextButton", G2L["43"]);
 G2L["47"]["BorderSizePixel"] = 0;
 G2L["47"]["TextTransparency"] = 1;
@@ -721,7 +721,7 @@ G2L["47"]["Text"] = [[]];
 G2L["47"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock
 G2L["48"] = Instance.new("Frame", G2L["1e"]);
 G2L["48"]["BorderSizePixel"] = 0;
 G2L["48"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -731,12 +731,12 @@ G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["48"]["Name"] = [[ToggleResetUnlock]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.UICorner
 G2L["49"] = Instance.new("UICorner", G2L["48"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.TextLabel
 G2L["4a"] = Instance.new("TextLabel", G2L["48"]);
 G2L["4a"]["TextWrapped"] = true;
 G2L["4a"]["BorderSizePixel"] = 0;
@@ -753,7 +753,7 @@ G2L["4a"]["Text"] = [[Reset unlock]];
 G2L["4a"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle
 G2L["4b"] = Instance.new("Frame", G2L["48"]);
 G2L["4b"]["BorderSizePixel"] = 0;
 G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -763,12 +763,12 @@ G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4b"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.UICorner
 G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
 G2L["4c"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Dot
 G2L["4d"] = Instance.new("Frame", G2L["4b"]);
 G2L["4d"]["BorderSizePixel"] = 0;
 G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -779,12 +779,12 @@ G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4d"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Dot.UICorner
 G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
 G2L["4e"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleResetUnlock.Toggle.Init
 G2L["4f"] = Instance.new("TextButton", G2L["4b"]);
 G2L["4f"]["BorderSizePixel"] = 0;
 G2L["4f"]["TextTransparency"] = 1;
@@ -799,7 +799,7 @@ G2L["4f"]["Text"] = [[]];
 G2L["4f"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock
 G2L["50"] = Instance.new("Frame", G2L["1e"]);
 G2L["50"]["BorderSizePixel"] = 0;
 G2L["50"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -809,12 +809,12 @@ G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["50"]["Name"] = [[ToggleBackpackUnlock]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.UICorner
 G2L["51"] = Instance.new("UICorner", G2L["50"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.TextLabel
 G2L["52"] = Instance.new("TextLabel", G2L["50"]);
 G2L["52"]["TextWrapped"] = true;
 G2L["52"]["BorderSizePixel"] = 0;
@@ -831,7 +831,7 @@ G2L["52"]["Text"] = [[Backpack unlock]];
 G2L["52"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle
 G2L["53"] = Instance.new("Frame", G2L["50"]);
 G2L["53"]["BorderSizePixel"] = 0;
 G2L["53"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -841,12 +841,12 @@ G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["53"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.UICorner
 G2L["54"] = Instance.new("UICorner", G2L["53"]);
 G2L["54"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Dot
 G2L["55"] = Instance.new("Frame", G2L["53"]);
 G2L["55"]["BorderSizePixel"] = 0;
 G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -857,12 +857,12 @@ G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["55"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Dot.UICorner
 G2L["56"] = Instance.new("UICorner", G2L["55"]);
 G2L["56"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Settings.ToggleBackpackUnlock.Toggle.Init
 G2L["57"] = Instance.new("TextButton", G2L["53"]);
 G2L["57"]["BorderSizePixel"] = 0;
 G2L["57"]["TextTransparency"] = 1;
@@ -877,7 +877,7 @@ G2L["57"]["Text"] = [[]];
 G2L["57"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport
 G2L["58"] = Instance.new("Frame", G2L["1d"]);
 G2L["58"]["Visible"] = false;
 G2L["58"]["BorderSizePixel"] = 0;
@@ -889,7 +889,7 @@ G2L["58"]["Name"] = [[Teleport]];
 G2L["58"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame
 G2L["59"] = Instance.new("Frame", G2L["58"]);
 G2L["59"]["BorderSizePixel"] = 0;
 G2L["59"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -899,12 +899,12 @@ G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["59"]["Name"] = [[CreateFrame]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.UICorner
 G2L["5a"] = Instance.new("UICorner", G2L["59"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.TextLabel
 G2L["5b"] = Instance.new("TextLabel", G2L["59"]);
 G2L["5b"]["TextWrapped"] = true;
 G2L["5b"]["BorderSizePixel"] = 0;
@@ -920,7 +920,7 @@ G2L["5b"]["Text"] = [[Create a part]];
 G2L["5b"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.Init
 G2L["5c"] = Instance.new("TextButton", G2L["59"]);
 G2L["5c"]["BorderSizePixel"] = 0;
 G2L["5c"]["TextTransparency"] = 1;
@@ -935,12 +935,12 @@ G2L["5c"]["Text"] = [[]];
 G2L["5c"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.CreateFrame.Init.UICorner
 G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints
 G2L["5e"] = Instance.new("ScrollingFrame", G2L["58"]);
 G2L["5e"]["Active"] = true;
 G2L["5e"]["ScrollingDirection"] = Enum.ScrollingDirection.Y;
@@ -956,7 +956,7 @@ G2L["5e"]["ScrollBarThickness"] = 6;
 G2L["5e"]["BackgroundTransparency"] = 0.9;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout
 G2L["5f"] = Instance.new("UIListLayout", G2L["5e"]);
 G2L["5f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 G2L["5f"]["Wraps"] = true;
@@ -965,7 +965,7 @@ G2L["5f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 G2L["5f"]["FillDirection"] = Enum.FillDirection.Horizontal;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample
 G2L["60"] = Instance.new("Frame", G2L["5f"]);
 G2L["60"]["BorderSizePixel"] = 0;
 G2L["60"]["BackgroundColor3"] = Color3.fromRGB(128, 128, 128);
@@ -975,12 +975,12 @@ G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["60"]["Name"] = [[WaypointExample]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.UICorner
 G2L["61"] = Instance.new("UICorner", G2L["60"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.TextLabel
 G2L["62"] = Instance.new("TextLabel", G2L["60"]);
 G2L["62"]["TextWrapped"] = true;
 G2L["62"]["BorderSizePixel"] = 0;
@@ -997,12 +997,12 @@ G2L["62"]["Text"] = [[Waypoint number 1]];
 G2L["62"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.UIPadding
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.UIPadding
 G2L["63"] = Instance.new("UIPadding", G2L["60"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.Init
 G2L["64"] = Instance.new("TextButton", G2L["60"]);
 G2L["64"]["BorderSizePixel"] = 0;
 G2L["64"]["TextTransparency"] = 1;
@@ -1017,17 +1017,17 @@ G2L["64"]["Text"] = [[]];
 G2L["64"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UIListLayout.WaypointExample.Init.UICorner
 G2L["65"] = Instance.new("UICorner", G2L["64"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.Waypoints.UICorner
 G2L["66"] = Instance.new("UICorner", G2L["5e"]);
 G2L["66"]["CornerRadius"] = UDim.new(0.04, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TextLabel
 G2L["67"] = Instance.new("TextLabel", G2L["58"]);
 G2L["67"]["TextWrapped"] = true;
 G2L["67"]["BorderSizePixel"] = 0;
@@ -1043,7 +1043,7 @@ G2L["67"]["Text"] = [[Waypoints]];
 G2L["67"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame
 G2L["68"] = Instance.new("Frame", G2L["58"]);
 G2L["68"]["BorderSizePixel"] = 0;
 G2L["68"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1053,12 +1053,12 @@ G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["68"]["Name"] = [[TeleportFrame]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.UICorner
 G2L["69"] = Instance.new("UICorner", G2L["68"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.TextLabel
 G2L["6a"] = Instance.new("TextLabel", G2L["68"]);
 G2L["6a"]["TextWrapped"] = true;
 G2L["6a"]["BorderSizePixel"] = 0;
@@ -1074,7 +1074,7 @@ G2L["6a"]["Text"] = [[Teleport to part]];
 G2L["6a"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.Init
 G2L["6b"] = Instance.new("TextButton", G2L["68"]);
 G2L["6b"]["BorderSizePixel"] = 0;
 G2L["6b"]["TextTransparency"] = 1;
@@ -1089,12 +1089,12 @@ G2L["6b"]["Text"] = [[]];
 G2L["6b"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.Teleport.TeleportFrame.Init.UICorner
 G2L["6c"] = Instance.new("UICorner", G2L["6b"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter
 G2L["6d"] = Instance.new("Frame", G2L["1d"]);
 G2L["6d"]["Visible"] = false;
 G2L["6d"]["BorderSizePixel"] = 0;
@@ -1106,7 +1106,7 @@ G2L["6d"]["Name"] = [[MainCharacter]];
 G2L["6d"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TextLabel
 G2L["6e"] = Instance.new("TextLabel", G2L["6d"]);
 G2L["6e"]["TextWrapped"] = true;
 G2L["6e"]["BorderSizePixel"] = 0;
@@ -1122,7 +1122,7 @@ G2L["6e"]["Text"] = [[Character Settings]];
 G2L["6e"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed
 G2L["6f"] = Instance.new("Frame", G2L["6d"]);
 G2L["6f"]["BorderSizePixel"] = 0;
 G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1132,12 +1132,12 @@ G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6f"]["Name"] = [[WalkSpeed]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.UICorner
 G2L["70"] = Instance.new("UICorner", G2L["6f"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.TextLabel
 G2L["71"] = Instance.new("TextLabel", G2L["6f"]);
 G2L["71"]["TextWrapped"] = true;
 G2L["71"]["BorderSizePixel"] = 0;
@@ -1153,7 +1153,7 @@ G2L["71"]["Text"] = [[Walk speed]];
 G2L["71"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Decrease
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Decrease
 G2L["72"] = Instance.new("TextButton", G2L["6f"]);
 G2L["72"]["TextWrapped"] = true;
 G2L["72"]["BorderSizePixel"] = 0;
@@ -1170,12 +1170,12 @@ G2L["72"]["Name"] = [[Decrease]];
 G2L["72"]["Position"] = UDim2.new(0.03297, 0, 0.49929, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Decrease.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Decrease.UICorner
 G2L["73"] = Instance.new("UICorner", G2L["72"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count
 G2L["74"] = Instance.new("Frame", G2L["6f"]);
 G2L["74"]["BorderSizePixel"] = 0;
 G2L["74"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -1185,12 +1185,12 @@ G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["74"]["Name"] = [[Count]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count.UICorner
 G2L["75"] = Instance.new("UICorner", G2L["74"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Count.TextLabel
 G2L["76"] = Instance.new("TextLabel", G2L["74"]);
 G2L["76"]["TextWrapped"] = true;
 G2L["76"]["BorderSizePixel"] = 0;
@@ -1206,7 +1206,7 @@ G2L["76"]["Text"] = [[0]];
 G2L["76"]["Position"] = UDim2.new(0, 0, -0.02584, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Increase
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Increase
 G2L["77"] = Instance.new("TextButton", G2L["6f"]);
 G2L["77"]["TextWrapped"] = true;
 G2L["77"]["BorderSizePixel"] = 0;
@@ -1223,12 +1223,12 @@ G2L["77"]["Name"] = [[Increase]];
 G2L["77"]["Position"] = UDim2.new(0.75864, 0, 0.49929, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Increase.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.WalkSpeed.Increase.UICorner
 G2L["78"] = Instance.new("UICorner", G2L["77"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight
 G2L["79"] = Instance.new("Frame", G2L["6d"]);
 G2L["79"]["BorderSizePixel"] = 0;
 G2L["79"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1238,12 +1238,12 @@ G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["79"]["Name"] = [[JumpHeight]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.UICorner
 G2L["7a"] = Instance.new("UICorner", G2L["79"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.TextLabel
 G2L["7b"] = Instance.new("TextLabel", G2L["79"]);
 G2L["7b"]["TextWrapped"] = true;
 G2L["7b"]["BorderSizePixel"] = 0;
@@ -1259,7 +1259,7 @@ G2L["7b"]["Text"] = [[Jump height]];
 G2L["7b"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Decrease
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Decrease
 G2L["7c"] = Instance.new("TextButton", G2L["79"]);
 G2L["7c"]["TextWrapped"] = true;
 G2L["7c"]["BorderSizePixel"] = 0;
@@ -1276,12 +1276,12 @@ G2L["7c"]["Name"] = [[Decrease]];
 G2L["7c"]["Position"] = UDim2.new(0.03297, 0, 0.49929, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Decrease.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Decrease.UICorner
 G2L["7d"] = Instance.new("UICorner", G2L["7c"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count
 G2L["7e"] = Instance.new("Frame", G2L["79"]);
 G2L["7e"]["BorderSizePixel"] = 0;
 G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -1291,12 +1291,12 @@ G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7e"]["Name"] = [[Count]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count.UICorner
 G2L["7f"] = Instance.new("UICorner", G2L["7e"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Count.TextLabel
 G2L["80"] = Instance.new("TextLabel", G2L["7e"]);
 G2L["80"]["TextWrapped"] = true;
 G2L["80"]["BorderSizePixel"] = 0;
@@ -1312,7 +1312,7 @@ G2L["80"]["Text"] = [[0]];
 G2L["80"]["Position"] = UDim2.new(0, 0, -0.02584, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Increase
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Increase
 G2L["81"] = Instance.new("TextButton", G2L["79"]);
 G2L["81"]["TextWrapped"] = true;
 G2L["81"]["BorderSizePixel"] = 0;
@@ -1329,12 +1329,12 @@ G2L["81"]["Name"] = [[Increase]];
 G2L["81"]["Position"] = UDim2.new(0.75864, 0, 0.49929, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Increase.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.JumpHeight.Increase.UICorner
 G2L["82"] = Instance.new("UICorner", G2L["81"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage
 G2L["83"] = Instance.new("Frame", G2L["6d"]);
 G2L["83"]["BorderSizePixel"] = 0;
 G2L["83"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1344,12 +1344,12 @@ G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["83"]["Name"] = [[NextPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.UICorner
 G2L["84"] = Instance.new("UICorner", G2L["83"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.TextLabel
 G2L["85"] = Instance.new("TextLabel", G2L["83"]);
 G2L["85"]["TextWrapped"] = true;
 G2L["85"]["BorderSizePixel"] = 0;
@@ -1365,7 +1365,7 @@ G2L["85"]["Text"] = [[Next page -->]];
 G2L["85"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.Init
 G2L["86"] = Instance.new("TextButton", G2L["83"]);
 G2L["86"]["BorderSizePixel"] = 0;
 G2L["86"]["TextTransparency"] = 1;
@@ -1380,12 +1380,12 @@ G2L["86"]["Text"] = [[]];
 G2L["86"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.NextPage.Init.UICorner
 G2L["87"] = Instance.new("UICorner", G2L["86"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer
 G2L["88"] = Instance.new("Frame", G2L["6d"]);
 G2L["88"]["BorderSizePixel"] = 0;
 G2L["88"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1395,12 +1395,12 @@ G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["88"]["Name"] = [[TeleportToPlayer]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.UICorner
 G2L["89"] = Instance.new("UICorner", G2L["88"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Lable
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Lable
 G2L["8a"] = Instance.new("TextLabel", G2L["88"]);
 G2L["8a"]["TextWrapped"] = true;
 G2L["8a"]["BorderSizePixel"] = 0;
@@ -1417,7 +1417,7 @@ G2L["8a"]["Name"] = [[Lable]];
 G2L["8a"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box
 G2L["8b"] = Instance.new("Frame", G2L["88"]);
 G2L["8b"]["BorderSizePixel"] = 0;
 G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -1427,12 +1427,12 @@ G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8b"]["Name"] = [[Box]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box.UICorner
 G2L["8c"] = Instance.new("UICorner", G2L["8b"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box.TextBox
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Box.TextBox
 G2L["8d"] = Instance.new("TextBox", G2L["8b"]);
 G2L["8d"]["BorderSizePixel"] = 0;
 G2L["8d"]["TextWrapped"] = true;
@@ -1448,7 +1448,7 @@ G2L["8d"]["Text"] = [[]];
 G2L["8d"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Example
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.TeleportToPlayer.Example
 G2L["8e"] = Instance.new("TextLabel", G2L["88"]);
 G2L["8e"]["TextWrapped"] = true;
 G2L["8e"]["BorderSizePixel"] = 0;
@@ -1466,7 +1466,7 @@ G2L["8e"]["Name"] = [[Example]];
 G2L["8e"]["Position"] = UDim2.new(0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers
 G2L["8f"] = Instance.new("Frame", G2L["6d"]);
 G2L["8f"]["BorderSizePixel"] = 0;
 G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1476,12 +1476,12 @@ G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8f"]["Name"] = [[FlingAllPlayers]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.UICorner
 G2L["90"] = Instance.new("UICorner", G2L["8f"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.Lable
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.Lable
 G2L["91"] = Instance.new("TextLabel", G2L["8f"]);
 G2L["91"]["TextWrapped"] = true;
 G2L["91"]["BorderSizePixel"] = 0;
@@ -1498,7 +1498,7 @@ G2L["91"]["Name"] = [[Lable]];
 G2L["91"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.Example
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.Example
 G2L["92"] = Instance.new("TextLabel", G2L["8f"]);
 G2L["92"]["TextWrapped"] = true;
 G2L["92"]["BorderSizePixel"] = 0;
@@ -1516,7 +1516,7 @@ G2L["92"]["Name"] = [[Example]];
 G2L["92"]["Position"] = UDim2.new(0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton
 G2L["93"] = Instance.new("Frame", G2L["8f"]);
 G2L["93"]["BorderSizePixel"] = 0;
 G2L["93"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1526,12 +1526,12 @@ G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["93"]["Name"] = [[StartButton]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.UICorner
 G2L["94"] = Instance.new("UICorner", G2L["93"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.TextLabel
 G2L["95"] = Instance.new("TextLabel", G2L["93"]);
 G2L["95"]["TextWrapped"] = true;
 G2L["95"]["BorderSizePixel"] = 0;
@@ -1547,7 +1547,7 @@ G2L["95"]["Text"] = [[START]];
 G2L["95"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.Init
 G2L["96"] = Instance.new("TextButton", G2L["93"]);
 G2L["96"]["BorderSizePixel"] = 0;
 G2L["96"]["TextTransparency"] = 1;
@@ -1562,12 +1562,12 @@ G2L["96"]["Text"] = [[]];
 G2L["96"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StartButton.Init.UICorner
 G2L["97"] = Instance.new("UICorner", G2L["96"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton
 G2L["98"] = Instance.new("Frame", G2L["8f"]);
 G2L["98"]["BorderSizePixel"] = 0;
 G2L["98"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1577,12 +1577,12 @@ G2L["98"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["98"]["Name"] = [[StopButton]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.UICorner
 G2L["99"] = Instance.new("UICorner", G2L["98"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.TextLabel
 G2L["9a"] = Instance.new("TextLabel", G2L["98"]);
 G2L["9a"]["TextWrapped"] = true;
 G2L["9a"]["BorderSizePixel"] = 0;
@@ -1598,7 +1598,7 @@ G2L["9a"]["Text"] = [[STOP]];
 G2L["9a"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.Init
 G2L["9b"] = Instance.new("TextButton", G2L["98"]);
 G2L["9b"]["BorderSizePixel"] = 0;
 G2L["9b"]["TextTransparency"] = 1;
@@ -1613,12 +1613,12 @@ G2L["9b"]["Text"] = [[]];
 G2L["9b"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.MainCharacter.FlingAllPlayers.StopButton.Init.UICorner
 G2L["9c"] = Instance.new("UICorner", G2L["9b"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter
 G2L["9d"] = Instance.new("Frame", G2L["1d"]);
 G2L["9d"]["Visible"] = false;
 G2L["9d"]["BorderSizePixel"] = 0;
@@ -1630,7 +1630,7 @@ G2L["9d"]["Name"] = [[AnimationCharacter]];
 G2L["9d"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TextLabel
 G2L["9e"] = Instance.new("TextLabel", G2L["9d"]);
 G2L["9e"]["TextWrapped"] = true;
 G2L["9e"]["BorderSizePixel"] = 0;
@@ -1646,7 +1646,7 @@ G2L["9e"]["Text"] = [[Character Animations]];
 G2L["9e"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation
 G2L["9f"] = Instance.new("Frame", G2L["9d"]);
 G2L["9f"]["BorderSizePixel"] = 0;
 G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1656,12 +1656,12 @@ G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9f"]["Name"] = [[Animation]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.UICorner
 G2L["a0"] = Instance.new("UICorner", G2L["9f"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Lable
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Lable
 G2L["a1"] = Instance.new("TextLabel", G2L["9f"]);
 G2L["a1"]["TextWrapped"] = true;
 G2L["a1"]["BorderSizePixel"] = 0;
@@ -1678,7 +1678,7 @@ G2L["a1"]["Name"] = [[Lable]];
 G2L["a1"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count
 G2L["a2"] = Instance.new("Frame", G2L["9f"]);
 G2L["a2"]["BorderSizePixel"] = 0;
 G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -1688,12 +1688,12 @@ G2L["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["a2"]["Name"] = [[Count]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count.UICorner
 G2L["a3"] = Instance.new("UICorner", G2L["a2"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count.TextBox
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Count.TextBox
 G2L["a4"] = Instance.new("TextBox", G2L["a2"]);
 G2L["a4"]["BorderSizePixel"] = 0;
 G2L["a4"]["TextWrapped"] = true;
@@ -1709,7 +1709,7 @@ G2L["a4"]["Text"] = [[]];
 G2L["a4"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Example
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.Animation.Example
 G2L["a5"] = Instance.new("TextLabel", G2L["9f"]);
 G2L["a5"]["TextWrapped"] = true;
 G2L["a5"]["BorderSizePixel"] = 0;
@@ -1726,7 +1726,7 @@ G2L["a5"]["Name"] = [[Example]];
 G2L["a5"]["Position"] = UDim2.new(-0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage
 G2L["a6"] = Instance.new("Frame", G2L["9d"]);
 G2L["a6"]["BorderSizePixel"] = 0;
 G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1736,12 +1736,12 @@ G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["a6"]["Name"] = [[PreviousPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.UICorner
 G2L["a7"] = Instance.new("UICorner", G2L["a6"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.TextLabel
 G2L["a8"] = Instance.new("TextLabel", G2L["a6"]);
 G2L["a8"]["TextWrapped"] = true;
 G2L["a8"]["BorderSizePixel"] = 0;
@@ -1757,7 +1757,7 @@ G2L["a8"]["Text"] = [[<-- Previous page]];
 G2L["a8"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.Init
 G2L["a9"] = Instance.new("TextButton", G2L["a6"]);
 G2L["a9"]["BorderSizePixel"] = 0;
 G2L["a9"]["TextTransparency"] = 1;
@@ -1772,12 +1772,12 @@ G2L["a9"]["Text"] = [[]];
 G2L["a9"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.PreviousPage.Init.UICorner
 G2L["aa"] = Instance.new("UICorner", G2L["a9"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying
 G2L["ab"] = Instance.new("Frame", G2L["9d"]);
 G2L["ab"]["BorderSizePixel"] = 0;
 G2L["ab"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1787,12 +1787,12 @@ G2L["ab"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ab"]["Name"] = [[TogglePlaying]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.UICorner
 G2L["ac"] = Instance.new("UICorner", G2L["ab"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.TextLabel
 G2L["ad"] = Instance.new("TextLabel", G2L["ab"]);
 G2L["ad"]["TextWrapped"] = true;
 G2L["ad"]["BorderSizePixel"] = 0;
@@ -1809,7 +1809,7 @@ G2L["ad"]["Text"] = [[Playing]];
 G2L["ad"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle
 G2L["ae"] = Instance.new("Frame", G2L["ab"]);
 G2L["ae"]["BorderSizePixel"] = 0;
 G2L["ae"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -1819,12 +1819,12 @@ G2L["ae"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ae"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.UICorner
 G2L["af"] = Instance.new("UICorner", G2L["ae"]);
 G2L["af"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Dot
 G2L["b0"] = Instance.new("Frame", G2L["ae"]);
 G2L["b0"]["BorderSizePixel"] = 0;
 G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1835,12 +1835,12 @@ G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b0"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Dot.UICorner
 G2L["b1"] = Instance.new("UICorner", G2L["b0"]);
 G2L["b1"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.TogglePlaying.Toggle.Init
 G2L["b2"] = Instance.new("TextButton", G2L["ae"]);
 G2L["b2"]["BorderSizePixel"] = 0;
 G2L["b2"]["TextTransparency"] = 1;
@@ -1855,7 +1855,7 @@ G2L["b2"]["Text"] = [[]];
 G2L["b2"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop
 G2L["b3"] = Instance.new("Frame", G2L["9d"]);
 G2L["b3"]["BorderSizePixel"] = 0;
 G2L["b3"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1865,12 +1865,12 @@ G2L["b3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b3"]["Name"] = [[ToggleLoop]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.UICorner
 G2L["b4"] = Instance.new("UICorner", G2L["b3"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.TextLabel
 G2L["b5"] = Instance.new("TextLabel", G2L["b3"]);
 G2L["b5"]["TextWrapped"] = true;
 G2L["b5"]["BorderSizePixel"] = 0;
@@ -1887,7 +1887,7 @@ G2L["b5"]["Text"] = [[Looped]];
 G2L["b5"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle
 G2L["b6"] = Instance.new("Frame", G2L["b3"]);
 G2L["b6"]["BorderSizePixel"] = 0;
 G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -1897,12 +1897,12 @@ G2L["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b6"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.UICorner
 G2L["b7"] = Instance.new("UICorner", G2L["b6"]);
 G2L["b7"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Dot
 G2L["b8"] = Instance.new("Frame", G2L["b6"]);
 G2L["b8"]["BorderSizePixel"] = 0;
 G2L["b8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1913,12 +1913,12 @@ G2L["b8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b8"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Dot.UICorner
 G2L["b9"] = Instance.new("UICorner", G2L["b8"]);
 G2L["b9"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AnimationCharacter.ToggleLoop.Toggle.Init
 G2L["ba"] = Instance.new("TextButton", G2L["b6"]);
 G2L["ba"]["BorderSizePixel"] = 0;
 G2L["ba"]["TextTransparency"] = 1;
@@ -1933,7 +1933,7 @@ G2L["ba"]["Text"] = [[]];
 G2L["ba"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt
 G2L["bb"] = Instance.new("Frame", G2L["1d"]);
 G2L["bb"]["Visible"] = false;
 G2L["bb"]["BorderSizePixel"] = 0;
@@ -1945,7 +1945,7 @@ G2L["bb"]["Name"] = [[AIprompt]];
 G2L["bb"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.TextLabel
 G2L["bc"] = Instance.new("TextLabel", G2L["bb"]);
 G2L["bc"]["TextWrapped"] = true;
 G2L["bc"]["BorderSizePixel"] = 0;
@@ -1961,7 +1961,7 @@ G2L["bc"]["Text"] = [[Gemini AI prompt]];
 G2L["bc"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt
 G2L["bd"] = Instance.new("Frame", G2L["bb"]);
 G2L["bd"]["BorderSizePixel"] = 0;
 G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -1971,12 +1971,12 @@ G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bd"]["Name"] = [[Prompt]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.UICorner
 G2L["be"] = Instance.new("UICorner", G2L["bd"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Lable
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Lable
 G2L["bf"] = Instance.new("TextLabel", G2L["bd"]);
 G2L["bf"]["TextWrapped"] = true;
 G2L["bf"]["BorderSizePixel"] = 0;
@@ -1993,7 +1993,7 @@ G2L["bf"]["Name"] = [[Lable]];
 G2L["bf"]["Position"] = UDim2.new(0.03179, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box
 G2L["c0"] = Instance.new("Frame", G2L["bd"]);
 G2L["c0"]["BorderSizePixel"] = 0;
 G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -2003,14 +2003,13 @@ G2L["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c0"]["Name"] = [[Box]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box.UICorner
 G2L["c1"] = Instance.new("UICorner", G2L["c0"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box.TextBox
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Box.TextBox
 G2L["c2"] = Instance.new("TextBox", G2L["c0"]);
-G2L["c2"]["CursorPosition"] = -1;
 G2L["c2"]["BorderSizePixel"] = 0;
 G2L["c2"]["TextWrapped"] = true;
 G2L["c2"]["TextSize"] = 19;
@@ -2025,7 +2024,7 @@ G2L["c2"]["Text"] = [[]];
 G2L["c2"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Example
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.Prompt.Example
 G2L["c3"] = Instance.new("TextLabel", G2L["bd"]);
 G2L["c3"]["TextWrapped"] = true;
 G2L["c3"]["BorderSizePixel"] = 0;
@@ -2042,7 +2041,7 @@ G2L["c3"]["Name"] = [[Example]];
 G2L["c3"]["Position"] = UDim2.new(0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage
 G2L["c4"] = Instance.new("Frame", G2L["bb"]);
 G2L["c4"]["BorderSizePixel"] = 0;
 G2L["c4"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -2052,12 +2051,12 @@ G2L["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c4"]["Name"] = [[NextPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.UICorner
 G2L["c5"] = Instance.new("UICorner", G2L["c4"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.TextLabel
 G2L["c6"] = Instance.new("TextLabel", G2L["c4"]);
 G2L["c6"]["TextWrapped"] = true;
 G2L["c6"]["BorderSizePixel"] = 0;
@@ -2073,7 +2072,7 @@ G2L["c6"]["Text"] = [[Next page -->]];
 G2L["c6"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.Init
 G2L["c7"] = Instance.new("TextButton", G2L["c4"]);
 G2L["c7"]["BorderSizePixel"] = 0;
 G2L["c7"]["TextTransparency"] = 1;
@@ -2088,12 +2087,12 @@ G2L["c7"]["Text"] = [[]];
 G2L["c7"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.NextPage.Init.UICorner
 G2L["c8"] = Instance.new("UICorner", G2L["c7"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage
 G2L["c9"] = Instance.new("Frame", G2L["bb"]);
 G2L["c9"]["BorderSizePixel"] = 0;
 G2L["c9"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -2103,12 +2102,12 @@ G2L["c9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c9"]["Name"] = [[PreviousPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.UICorner
 G2L["ca"] = Instance.new("UICorner", G2L["c9"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.TextLabel
 G2L["cb"] = Instance.new("TextLabel", G2L["c9"]);
 G2L["cb"]["TextWrapped"] = true;
 G2L["cb"]["BorderSizePixel"] = 0;
@@ -2124,7 +2123,7 @@ G2L["cb"]["Text"] = [[<-- Previous page]];
 G2L["cb"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.Init
 G2L["cc"] = Instance.new("TextButton", G2L["c9"]);
 G2L["cc"]["BorderSizePixel"] = 0;
 G2L["cc"]["TextTransparency"] = 1;
@@ -2139,12 +2138,12 @@ G2L["cc"]["Text"] = [[]];
 G2L["cc"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIprompt.PreviousPage.Init.UICorner
 G2L["cd"] = Instance.new("UICorner", G2L["cc"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI
 G2L["ce"] = Instance.new("Frame", G2L["1d"]);
 G2L["ce"]["Visible"] = false;
 G2L["ce"]["BorderSizePixel"] = 0;
@@ -2156,7 +2155,7 @@ G2L["ce"]["Name"] = [[AI]];
 G2L["ce"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.TextLabel
 G2L["cf"] = Instance.new("TextLabel", G2L["ce"]);
 G2L["cf"]["TextWrapped"] = true;
 G2L["cf"]["BorderSizePixel"] = 0;
@@ -2172,7 +2171,7 @@ G2L["cf"]["Text"] = [[Gemini AI Troll]];
 G2L["cf"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role
 G2L["d0"] = Instance.new("Frame", G2L["ce"]);
 G2L["d0"]["BorderSizePixel"] = 0;
 G2L["d0"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -2182,12 +2181,12 @@ G2L["d0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d0"]["Name"] = [[Role]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.UICorner
 G2L["d1"] = Instance.new("UICorner", G2L["d0"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Lable
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Lable
 G2L["d2"] = Instance.new("TextLabel", G2L["d0"]);
 G2L["d2"]["TextWrapped"] = true;
 G2L["d2"]["BorderSizePixel"] = 0;
@@ -2204,7 +2203,7 @@ G2L["d2"]["Name"] = [[Lable]];
 G2L["d2"]["Position"] = UDim2.new(0.03179, 0, 0, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box
 G2L["d3"] = Instance.new("Frame", G2L["d0"]);
 G2L["d3"]["BorderSizePixel"] = 0;
 G2L["d3"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
@@ -2214,12 +2213,12 @@ G2L["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d3"]["Name"] = [[Box]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box.UICorner
 G2L["d4"] = Instance.new("UICorner", G2L["d3"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box.TextBox
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Box.TextBox
 G2L["d5"] = Instance.new("TextBox", G2L["d3"]);
 G2L["d5"]["BorderSizePixel"] = 0;
 G2L["d5"]["TextWrapped"] = true;
@@ -2235,7 +2234,7 @@ G2L["d5"]["Text"] = [[]];
 G2L["d5"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Example
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.Role.Example
 G2L["d6"] = Instance.new("TextLabel", G2L["d0"]);
 G2L["d6"]["TextWrapped"] = true;
 G2L["d6"]["BorderSizePixel"] = 0;
@@ -2252,7 +2251,7 @@ G2L["d6"]["Name"] = [[Example]];
 G2L["d6"]["Position"] = UDim2.new(0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage
 G2L["d7"] = Instance.new("Frame", G2L["ce"]);
 G2L["d7"]["BorderSizePixel"] = 0;
 G2L["d7"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -2262,12 +2261,12 @@ G2L["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d7"]["Name"] = [[NextPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.UICorner
 G2L["d8"] = Instance.new("UICorner", G2L["d7"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.TextLabel
 G2L["d9"] = Instance.new("TextLabel", G2L["d7"]);
 G2L["d9"]["TextWrapped"] = true;
 G2L["d9"]["BorderSizePixel"] = 0;
@@ -2283,7 +2282,7 @@ G2L["d9"]["Text"] = [[Next page -->]];
 G2L["d9"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.Init
 G2L["da"] = Instance.new("TextButton", G2L["d7"]);
 G2L["da"]["BorderSizePixel"] = 0;
 G2L["da"]["TextTransparency"] = 1;
@@ -2298,12 +2297,12 @@ G2L["da"]["Text"] = [[]];
 G2L["da"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AI.NextPage.Init.UICorner
 G2L["db"] = Instance.new("UICorner", G2L["da"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel
 G2L["dc"] = Instance.new("Frame", G2L["1d"]);
 G2L["dc"]["Visible"] = false;
 G2L["dc"]["BorderSizePixel"] = 0;
@@ -2315,7 +2314,7 @@ G2L["dc"]["Name"] = [[AIpanel]];
 G2L["dc"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.TextLabel
 G2L["dd"] = Instance.new("TextLabel", G2L["dc"]);
 G2L["dd"]["TextWrapped"] = true;
 G2L["dd"]["BorderSizePixel"] = 0;
@@ -2325,13 +2324,13 @@ G2L["dd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["dd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
 G2L["dd"]["TextColor3"] = Color3.fromRGB(176, 176, 176);
 G2L["dd"]["BackgroundTransparency"] = 1;
-G2L["dd"]["Size"] = UDim2.new(0.91521, 0, 0.14577, 0);
+G2L["dd"]["Size"] = UDim2.new(0.91521, 0, 0.14072, 0);
 G2L["dd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["dd"]["Text"] = [[Gemini AI panel]];
-G2L["dd"]["Position"] = UDim2.new(0.04, 0, -0.01352, 0);
+G2L["dd"]["Position"] = UDim2.new(0.04, 0, -0.03213, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage
 G2L["de"] = Instance.new("Frame", G2L["dc"]);
 G2L["de"]["BorderSizePixel"] = 0;
 G2L["de"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
@@ -2341,12 +2340,12 @@ G2L["de"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["de"]["Name"] = [[PreviousPage]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.UICorner
 G2L["df"] = Instance.new("UICorner", G2L["de"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.TextLabel
 G2L["e0"] = Instance.new("TextLabel", G2L["de"]);
 G2L["e0"]["TextWrapped"] = true;
 G2L["e0"]["BorderSizePixel"] = 0;
@@ -2362,7 +2361,7 @@ G2L["e0"]["Text"] = [[<-- Previous page]];
 G2L["e0"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.Init
 G2L["e1"] = Instance.new("TextButton", G2L["de"]);
 G2L["e1"]["BorderSizePixel"] = 0;
 G2L["e1"]["TextTransparency"] = 1;
@@ -2377,27 +2376,27 @@ G2L["e1"]["Text"] = [[]];
 G2L["e1"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PreviousPage.Init.UICorner
 G2L["e2"] = Instance.new("UICorner", G2L["e1"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton
 G2L["e3"] = Instance.new("Frame", G2L["dc"]);
 G2L["e3"]["BorderSizePixel"] = 0;
 G2L["e3"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
-G2L["e3"]["Size"] = UDim2.new(0.92267, 0, 0.16862, 0);
-G2L["e3"]["Position"] = UDim2.new(0.03254, 0, 0.16815, 0);
+G2L["e3"]["Size"] = UDim2.new(0.41859, 0, 0.24784, 0);
+G2L["e3"]["Position"] = UDim2.new(0.03254, 0, 0.10859, 0);
 G2L["e3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e3"]["Name"] = [[PromptButton]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.UICorner
 G2L["e4"] = Instance.new("UICorner", G2L["e3"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.TextLabel
 G2L["e5"] = Instance.new("TextLabel", G2L["e3"]);
 G2L["e5"]["TextWrapped"] = true;
 G2L["e5"]["BorderSizePixel"] = 0;
@@ -2413,7 +2412,7 @@ G2L["e5"]["Text"] = [[[✔️] Send prompt]];
 G2L["e5"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.Init
 G2L["e6"] = Instance.new("TextButton", G2L["e3"]);
 G2L["e6"]["BorderSizePixel"] = 0;
 G2L["e6"]["TextTransparency"] = 1;
@@ -2428,27 +2427,27 @@ G2L["e6"]["Text"] = [[]];
 G2L["e6"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.Init.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.PromptButton.Init.UICorner
 G2L["e7"] = Instance.new("UICorner", G2L["e6"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled
 G2L["e8"] = Instance.new("Frame", G2L["dc"]);
 G2L["e8"]["BorderSizePixel"] = 0;
 G2L["e8"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
 G2L["e8"]["Size"] = UDim2.new(0.9301, 0, 0.14259, 0);
-G2L["e8"]["Position"] = UDim2.new(0.03254, 0, 0.38404, 0);
+G2L["e8"]["Position"] = UDim2.new(0.03254, 0, 0.40376, 0);
 G2L["e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e8"]["Name"] = [[ToggleEnabled]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.UICorner
 G2L["e9"] = Instance.new("UICorner", G2L["e8"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.TextLabel
 G2L["ea"] = Instance.new("TextLabel", G2L["e8"]);
 G2L["ea"]["TextWrapped"] = true;
 G2L["ea"]["BorderSizePixel"] = 0;
@@ -2465,7 +2464,7 @@ G2L["ea"]["Text"] = [[Enabled Chatbot]];
 G2L["ea"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle
 G2L["eb"] = Instance.new("Frame", G2L["e8"]);
 G2L["eb"]["BorderSizePixel"] = 0;
 G2L["eb"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -2475,12 +2474,12 @@ G2L["eb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["eb"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.UICorner
 G2L["ec"] = Instance.new("UICorner", G2L["eb"]);
 G2L["ec"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Dot
 G2L["ed"] = Instance.new("Frame", G2L["eb"]);
 G2L["ed"]["BorderSizePixel"] = 0;
 G2L["ed"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -2491,12 +2490,12 @@ G2L["ed"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ed"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Dot.UICorner
 G2L["ee"] = Instance.new("UICorner", G2L["ed"]);
 G2L["ee"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleEnabled.Toggle.Init
 G2L["ef"] = Instance.new("TextButton", G2L["eb"]);
 G2L["ef"]["BorderSizePixel"] = 0;
 G2L["ef"]["TextTransparency"] = 1;
@@ -2511,22 +2510,22 @@ G2L["ef"]["Text"] = [[]];
 G2L["ef"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel
 G2L["f0"] = Instance.new("Frame", G2L["dc"]);
 G2L["f0"]["BorderSizePixel"] = 0;
 G2L["f0"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
 G2L["f0"]["Size"] = UDim2.new(0.9301, 0, 0.14259, 0);
-G2L["f0"]["Position"] = UDim2.new(0.03254, 0, 0.57659, 0);
+G2L["f0"]["Position"] = UDim2.new(0.0364, 0, 0.58842, 0);
 G2L["f0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f0"]["Name"] = [[ToggleFlashModel]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.UICorner
 G2L["f1"] = Instance.new("UICorner", G2L["f0"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.TextLabel
 G2L["f2"] = Instance.new("TextLabel", G2L["f0"]);
 G2L["f2"]["TextWrapped"] = true;
 G2L["f2"]["BorderSizePixel"] = 0;
@@ -2543,7 +2542,7 @@ G2L["f2"]["Text"] = [[Flash Gemini model]];
 G2L["f2"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle
 G2L["f3"] = Instance.new("Frame", G2L["f0"]);
 G2L["f3"]["BorderSizePixel"] = 0;
 G2L["f3"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -2553,12 +2552,12 @@ G2L["f3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f3"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.UICorner
 G2L["f4"] = Instance.new("UICorner", G2L["f3"]);
 G2L["f4"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Dot
 G2L["f5"] = Instance.new("Frame", G2L["f3"]);
 G2L["f5"]["BorderSizePixel"] = 0;
 G2L["f5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -2569,12 +2568,12 @@ G2L["f5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f5"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Dot.UICorner
 G2L["f6"] = Instance.new("UICorner", G2L["f5"]);
 G2L["f6"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleFlashModel.Toggle.Init
 G2L["f7"] = Instance.new("TextButton", G2L["f3"]);
 G2L["f7"]["BorderSizePixel"] = 0;
 G2L["f7"]["TextTransparency"] = 1;
@@ -2589,22 +2588,22 @@ G2L["f7"]["Text"] = [[]];
 G2L["f7"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel
 G2L["f8"] = Instance.new("Frame", G2L["dc"]);
 G2L["f8"]["BorderSizePixel"] = 0;
 G2L["f8"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
 G2L["f8"]["Size"] = UDim2.new(0.9301, 0, 0.14259, 0);
-G2L["f8"]["Position"] = UDim2.new(0.03254, 0, 0.76127, 0);
+G2L["f8"]["Position"] = UDim2.new(0.03254, 0, 0.77311, 0);
 G2L["f8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f8"]["Name"] = [[ToggleSlowModel]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.UICorner
 G2L["f9"] = Instance.new("UICorner", G2L["f8"]);
 
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.TextLabel
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.TextLabel
 G2L["fa"] = Instance.new("TextLabel", G2L["f8"]);
 G2L["fa"]["TextWrapped"] = true;
 G2L["fa"]["BorderSizePixel"] = 0;
@@ -2621,7 +2620,7 @@ G2L["fa"]["Text"] = [[Slow Gemini model]];
 G2L["fa"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle
 G2L["fb"] = Instance.new("Frame", G2L["f8"]);
 G2L["fb"]["BorderSizePixel"] = 0;
 G2L["fb"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
@@ -2631,12 +2630,12 @@ G2L["fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["fb"]["Name"] = [[Toggle]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.UICorner
 G2L["fc"] = Instance.new("UICorner", G2L["fb"]);
 G2L["fc"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Dot
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Dot
 G2L["fd"] = Instance.new("Frame", G2L["fb"]);
 G2L["fd"]["BorderSizePixel"] = 0;
 G2L["fd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -2647,12 +2646,12 @@ G2L["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["fd"]["Name"] = [[Dot]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Dot.UICorner
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Dot.UICorner
 G2L["fe"] = Instance.new("UICorner", G2L["fd"]);
 G2L["fe"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Init
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.ToggleSlowModel.Toggle.Init
 G2L["ff"] = Instance.new("TextButton", G2L["fb"]);
 G2L["ff"]["BorderSizePixel"] = 0;
 G2L["ff"]["TextTransparency"] = 1;
@@ -2667,160 +2666,241 @@ G2L["ff"]["Text"] = [[]];
 G2L["ff"]["Name"] = [[Init]];
 
 
--- StarterGui.RobHelper.MainFrame.MainContainer.UIStroke
-G2L["100"] = Instance.new("UIStroke", G2L["1b"]);
-G2L["100"]["Thickness"] = 1.9;
-G2L["100"]["Color"] = Color3.fromRGB(142, 142, 142);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox
+G2L["100"] = Instance.new("Frame", G2L["dc"]);
+G2L["100"]["BorderSizePixel"] = 0;
+G2L["100"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["100"]["Size"] = UDim2.new(0.46359, 0, 0.22818, 0);
+G2L["100"]["Position"] = UDim2.new(0.49905, 0, 0.10859, 0);
+G2L["100"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["100"]["Name"] = [[LockBox]];
 
 
--- StarterGui.RobHelper.MainFrame.Border
-G2L["101"] = Instance.new("Frame", G2L["2"]);
-G2L["101"]["BorderSizePixel"] = 0;
-G2L["101"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["101"]["Size"] = UDim2.new(0.06536, 0, 1, 0);
-G2L["101"]["Position"] = UDim2.new(0.24308, 0, -0, 0);
-G2L["101"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["101"]["Name"] = [[Border]];
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.UICorner
+G2L["101"] = Instance.new("UICorner", G2L["100"]);
 
 
--- StarterGui.RobHelper.MainFrame.Border.UIStroke
-G2L["102"] = Instance.new("UIStroke", G2L["101"]);
-G2L["102"]["Thickness"] = 1.9;
-G2L["102"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Lable
+G2L["102"] = Instance.new("TextLabel", G2L["100"]);
+G2L["102"]["TextWrapped"] = true;
+G2L["102"]["BorderSizePixel"] = 0;
+G2L["102"]["TextSize"] = 14;
+G2L["102"]["TextScaled"] = true;
+G2L["102"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["102"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["102"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["102"]["BackgroundTransparency"] = 1;
+G2L["102"]["Size"] = UDim2.new(0.94209, 0, 0.4856, 0);
+G2L["102"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["102"]["Text"] = [[Lock chatbot on player]];
+G2L["102"]["Name"] = [[Lable]];
+G2L["102"]["Position"] = UDim2.new(0.02347, 0, -0.01501, 0);
 
 
--- StarterGui.RobHelper.MainFrame.Border.Label
-G2L["103"] = Instance.new("TextLabel", G2L["101"]);
-G2L["103"]["TextWrapped"] = true;
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Box
+G2L["103"] = Instance.new("Frame", G2L["100"]);
 G2L["103"]["BorderSizePixel"] = 0;
-G2L["103"]["TextSize"] = 14;
-G2L["103"]["TextScaled"] = true;
-G2L["103"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["103"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["103"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
-G2L["103"]["BackgroundTransparency"] = 1;
-G2L["103"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
+G2L["103"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["103"]["Size"] = UDim2.new(0.94482, 0, 0.43944, 0);
+G2L["103"]["Position"] = UDim2.new(0.02759, 0, 0.47059, 0);
 G2L["103"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["103"]["Text"] = [[->]];
-G2L["103"]["Rotation"] = 90;
-G2L["103"]["Name"] = [[Label]];
-G2L["103"]["Position"] = UDim2.new(-0.19981, 0, 0.01457, 0);
+G2L["103"]["Name"] = [[Box]];
 
 
--- StarterGui.RobHelper.MainFrame.Border.Label
-G2L["104"] = Instance.new("TextLabel", G2L["101"]);
-G2L["104"]["TextWrapped"] = true;
-G2L["104"]["BorderSizePixel"] = 0;
-G2L["104"]["TextSize"] = 14;
-G2L["104"]["TextScaled"] = true;
-G2L["104"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["104"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["104"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
-G2L["104"]["BackgroundTransparency"] = 1;
-G2L["104"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
-G2L["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["104"]["Text"] = [[->]];
-G2L["104"]["Rotation"] = -90;
-G2L["104"]["Name"] = [[Label]];
-G2L["104"]["Position"] = UDim2.new(-0.19981, 0, 0.90449, 0);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Box.UICorner
+G2L["104"] = Instance.new("UICorner", G2L["103"]);
 
 
--- StarterGui.RobHelper.MainFrame.UIAspectRatioConstraint
-G2L["105"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
-G2L["105"]["AspectRatio"] = 1.27;
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Box.TextBox
+G2L["105"] = Instance.new("TextBox", G2L["103"]);
+G2L["105"]["CursorPosition"] = -1;
+G2L["105"]["BorderSizePixel"] = 0;
+G2L["105"]["TextWrapped"] = true;
+G2L["105"]["TextSize"] = 19;
+G2L["105"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["105"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["105"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["105"]["PlaceholderText"] = [[insert]];
+G2L["105"]["Size"] = UDim2.new(0.95049, 0, 1, 0);
+G2L["105"]["Position"] = UDim2.new(0.03112, 0, 0, 0);
+G2L["105"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["105"]["Text"] = [[]];
+G2L["105"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.RobHelper.MainFrame.Label
-G2L["106"] = Instance.new("Frame", G2L["2"]);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Example
+G2L["106"] = Instance.new("TextLabel", G2L["100"]);
+G2L["106"]["TextWrapped"] = true;
 G2L["106"]["BorderSizePixel"] = 0;
-G2L["106"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["106"]["Size"] = UDim2.new(0.24447, 0, 0.18883, 0);
-G2L["106"]["Position"] = UDim2.new(-0.00139, 0, 0, 0);
+G2L["106"]["TextSize"] = 14;
+G2L["106"]["TextScaled"] = true;
+G2L["106"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["106"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["106"]["TextColor3"] = Color3.fromRGB(107, 107, 107);
+G2L["106"]["BackgroundTransparency"] = 1;
+G2L["106"]["Size"] = UDim2.new(0.96555, 0, 0.28689, 0);
 G2L["106"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["106"]["Name"] = [[Label]];
-G2L["106"]["BackgroundTransparency"] = 0.3;
+G2L["106"]["Text"] = [[*Insert player name with enter]];
+G2L["106"]["Name"] = [[Example]];
+G2L["106"]["Position"] = UDim2.new(-0, 0, 0.99766, 0);
 
 
--- StarterGui.RobHelper.MainFrame.Label.TextLabel
-G2L["107"] = Instance.new("TextLabel", G2L["106"]);
-G2L["107"]["TextWrapped"] = true;
-G2L["107"]["BorderSizePixel"] = 0;
-G2L["107"]["TextSize"] = 14;
-G2L["107"]["TextScaled"] = true;
-G2L["107"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["107"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["107"]["TextColor3"] = Color3.fromRGB(174, 174, 174);
-G2L["107"]["BackgroundTransparency"] = 1;
-G2L["107"]["Size"] = UDim2.new(0.81237, 0, 0.75532, 0);
-G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["107"]["Text"] = [[RobHelper]];
-G2L["107"]["Position"] = UDim2.new(0.09058, 0, 0.11702, 0);
+-- Teams.RobHelper.MainFrame.MainContainer.UIStroke
+G2L["107"] = Instance.new("UIStroke", G2L["1b"]);
+G2L["107"]["Thickness"] = 1.9;
+G2L["107"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 
--- StarterGui.RobHelper.MainFrame.Label.UIStroke
-G2L["108"] = Instance.new("UIStroke", G2L["106"]);
-G2L["108"]["Thickness"] = 1.9;
-G2L["108"]["Color"] = Color3.fromRGB(142, 142, 142);
+-- Teams.RobHelper.MainFrame.Border
+G2L["108"] = Instance.new("Frame", G2L["2"]);
+G2L["108"]["BorderSizePixel"] = 0;
+G2L["108"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["108"]["Size"] = UDim2.new(0.06536, 0, 1, 0);
+G2L["108"]["Position"] = UDim2.new(0.24308, 0, -0, 0);
+G2L["108"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["108"]["Name"] = [[Border]];
 
 
--- StarterGui.RobHelper.MainFrame.Hide
-G2L["109"] = Instance.new("TextButton", G2L["2"]);
-G2L["109"]["TextWrapped"] = true;
-G2L["109"]["RichText"] = true;
-G2L["109"]["BorderSizePixel"] = 0;
-G2L["109"]["TextSize"] = 14;
-G2L["109"]["TextScaled"] = true;
-G2L["109"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
-G2L["109"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["109"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["109"]["ZIndex"] = 3;
-G2L["109"]["BackgroundTransparency"] = 1;
-G2L["109"]["Size"] = UDim2.new(0.04936, 0, 0.06293, 0);
-G2L["109"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["109"]["Text"] = [[<-]];
-G2L["109"]["Name"] = [[Hide]];
-G2L["109"]["Position"] = UDim2.new(-0, 0, -0.00201, 0);
+-- Teams.RobHelper.MainFrame.Border.UIStroke
+G2L["109"] = Instance.new("UIStroke", G2L["108"]);
+G2L["109"]["Thickness"] = 1.9;
+G2L["109"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 
--- StarterGui.RobHelper.Show
-G2L["10a"] = Instance.new("Frame", G2L["1"]);
-G2L["10a"]["Visible"] = false;
+-- Teams.RobHelper.MainFrame.Border.Label
+G2L["10a"] = Instance.new("TextLabel", G2L["108"]);
+G2L["10a"]["TextWrapped"] = true;
 G2L["10a"]["BorderSizePixel"] = 0;
-G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
-G2L["10a"]["Size"] = UDim2.new(0.05954, 0, 0.16192, 0);
-G2L["10a"]["Position"] = UDim2.new(-0.00071, 0, 0.42271, 0);
+G2L["10a"]["TextSize"] = 14;
+G2L["10a"]["TextScaled"] = true;
+G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["10a"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10a"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
+G2L["10a"]["BackgroundTransparency"] = 1;
+G2L["10a"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
 G2L["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10a"]["Name"] = [[Show]];
-G2L["10a"]["BackgroundTransparency"] = 0.65;
+G2L["10a"]["Text"] = [[->]];
+G2L["10a"]["Rotation"] = 90;
+G2L["10a"]["Name"] = [[Label]];
+G2L["10a"]["Position"] = UDim2.new(-0.19981, 0, 0.01457, 0);
 
 
--- StarterGui.RobHelper.Show.UIAspectRatioConstraint
-G2L["10b"] = Instance.new("UIAspectRatioConstraint", G2L["10a"]);
-G2L["10b"]["AspectRatio"] = 1.27;
+-- Teams.RobHelper.MainFrame.Border.Label
+G2L["10b"] = Instance.new("TextLabel", G2L["108"]);
+G2L["10b"]["TextWrapped"] = true;
+G2L["10b"]["BorderSizePixel"] = 0;
+G2L["10b"]["TextSize"] = 14;
+G2L["10b"]["TextScaled"] = true;
+G2L["10b"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["10b"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10b"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
+G2L["10b"]["BackgroundTransparency"] = 1;
+G2L["10b"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
+G2L["10b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10b"]["Text"] = [[->]];
+G2L["10b"]["Rotation"] = -90;
+G2L["10b"]["Name"] = [[Label]];
+G2L["10b"]["Position"] = UDim2.new(-0.19981, 0, 0.90449, 0);
 
 
--- StarterGui.RobHelper.Show.ShowButton
-G2L["10c"] = Instance.new("TextButton", G2L["10a"]);
-G2L["10c"]["TextWrapped"] = true;
-G2L["10c"]["RichText"] = true;
-G2L["10c"]["BorderSizePixel"] = 0;
-G2L["10c"]["TextSize"] = 14;
-G2L["10c"]["TextScaled"] = true;
-G2L["10c"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
-G2L["10c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10c"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["10c"]["ZIndex"] = 4;
-G2L["10c"]["BackgroundTransparency"] = 1;
-G2L["10c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["10c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10c"]["Text"] = [[-->]];
-G2L["10c"]["Name"] = [[ShowButton]];
+-- Teams.RobHelper.MainFrame.UIAspectRatioConstraint
+G2L["10c"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
+G2L["10c"]["AspectRatio"] = 1.27;
 
 
--- StarterGui.RobHelper.Show.UIStroke
-G2L["10d"] = Instance.new("UIStroke", G2L["10a"]);
-G2L["10d"]["Thickness"] = 1.9;
-G2L["10d"]["Color"] = Color3.fromRGB(142, 142, 142);
+-- Teams.RobHelper.MainFrame.Label
+G2L["10d"] = Instance.new("Frame", G2L["2"]);
+G2L["10d"]["BorderSizePixel"] = 0;
+G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10d"]["Size"] = UDim2.new(0.24447, 0, 0.18883, 0);
+G2L["10d"]["Position"] = UDim2.new(-0.00139, 0, 0, 0);
+G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10d"]["Name"] = [[Label]];
+G2L["10d"]["BackgroundTransparency"] = 0.3;
+
+
+-- Teams.RobHelper.MainFrame.Label.TextLabel
+G2L["10e"] = Instance.new("TextLabel", G2L["10d"]);
+G2L["10e"]["TextWrapped"] = true;
+G2L["10e"]["BorderSizePixel"] = 0;
+G2L["10e"]["TextSize"] = 14;
+G2L["10e"]["TextScaled"] = true;
+G2L["10e"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["10e"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10e"]["TextColor3"] = Color3.fromRGB(174, 174, 174);
+G2L["10e"]["BackgroundTransparency"] = 1;
+G2L["10e"]["Size"] = UDim2.new(0.81237, 0, 0.75532, 0);
+G2L["10e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10e"]["Text"] = [[RobHelper]];
+G2L["10e"]["Position"] = UDim2.new(0.09058, 0, 0.11702, 0);
+
+
+-- Teams.RobHelper.MainFrame.Label.UIStroke
+G2L["10f"] = Instance.new("UIStroke", G2L["10d"]);
+G2L["10f"]["Thickness"] = 1.9;
+G2L["10f"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+
+-- Teams.RobHelper.MainFrame.Hide
+G2L["110"] = Instance.new("TextButton", G2L["2"]);
+G2L["110"]["TextWrapped"] = true;
+G2L["110"]["RichText"] = true;
+G2L["110"]["BorderSizePixel"] = 0;
+G2L["110"]["TextSize"] = 14;
+G2L["110"]["TextScaled"] = true;
+G2L["110"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
+G2L["110"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["110"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["110"]["ZIndex"] = 3;
+G2L["110"]["BackgroundTransparency"] = 1;
+G2L["110"]["Size"] = UDim2.new(0.04936, 0, 0.06293, 0);
+G2L["110"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["110"]["Text"] = [[<-]];
+G2L["110"]["Name"] = [[Hide]];
+G2L["110"]["Position"] = UDim2.new(-0, 0, -0.00201, 0);
+
+
+-- Teams.RobHelper.Show
+G2L["111"] = Instance.new("Frame", G2L["1"]);
+G2L["111"]["Visible"] = false;
+G2L["111"]["BorderSizePixel"] = 0;
+G2L["111"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+G2L["111"]["Size"] = UDim2.new(0.05954, 0, 0.16192, 0);
+G2L["111"]["Position"] = UDim2.new(-0.00071, 0, 0.42271, 0);
+G2L["111"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["111"]["Name"] = [[Show]];
+G2L["111"]["BackgroundTransparency"] = 0.65;
+
+
+-- Teams.RobHelper.Show.UIAspectRatioConstraint
+G2L["112"] = Instance.new("UIAspectRatioConstraint", G2L["111"]);
+G2L["112"]["AspectRatio"] = 1.27;
+
+
+-- Teams.RobHelper.Show.ShowButton
+G2L["113"] = Instance.new("TextButton", G2L["111"]);
+G2L["113"]["TextWrapped"] = true;
+G2L["113"]["RichText"] = true;
+G2L["113"]["BorderSizePixel"] = 0;
+G2L["113"]["TextSize"] = 14;
+G2L["113"]["TextScaled"] = true;
+G2L["113"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
+G2L["113"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["113"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["113"]["ZIndex"] = 4;
+G2L["113"]["BackgroundTransparency"] = 1;
+G2L["113"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["113"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["113"]["Text"] = [[-->]];
+G2L["113"]["Name"] = [[ShowButton]];
+
+
+-- Teams.RobHelper.Show.UIStroke
+G2L["114"] = Instance.new("UIStroke", G2L["111"]);
+G2L["114"]["Thickness"] = 1.9;
+G2L["114"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Instances.lua", true))() -- Bindable Events
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/MainGui.lua", true))()
