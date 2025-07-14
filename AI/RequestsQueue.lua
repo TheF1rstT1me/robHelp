@@ -50,6 +50,22 @@ function isCharacterVisible(targetCharacter)
 	return false
 end
 
+function InsertRequest(model, sysinst, prompt)
+	if #Queue ~= 0 then
+		for _, tableRequest in pairs(Queue) do
+			if (tableRequest[2] == sysinst and tableRequest[3] == prompt) then
+				return false 
+			end;
+		end
+	end
+
+	local GUID = HttpService:GenerateGUID()
+	local newRequest = {model, sysinst, prompt, GUID}
+	table.insert(Queue, newRequest)
+
+	return true;
+end
+
 function GetQueueIndex(GUID: string)
 	for index, table_ in pairs(Queue) do
 		if table_[4] == GUID then return index end; 
@@ -122,15 +138,14 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 	if state then
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 			local text = message.Text
-			local targetPlayer = Players:FindFirstChild(message.TextSource.Name) :: Player -- Источник (игрок или система) 
+			local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
+
 
 			if targetPlayer and targetPlayer ~= player then
 				local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 			
 				if isCharacterVisible(playerCharacter) then
-					local GUID = HttpService:GenerateGUID()
-					local newRequest = {model, sysinst, text, GUID}
-					table.insert(Queue, newRequest)
+					InsertRequest(model, sysinst, text)
 					
 					if #Queue == 1 then
 						SendToGemini(Queue[1])
@@ -144,9 +159,7 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 end)
 
 SendRequest.Event:Connect(function(sysinst, model, prompt) 
-	local GUID = HttpService:GenerateGUID()
-	local newRequest = {model, sysinst, prompt, GUID}
-	table.insert(Queue, newRequest)
+	InsertRequest(model, sysinst, prompt)
 	
 	if #Queue == 1 then
 		SendToGemini(Queue[1])
