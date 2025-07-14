@@ -149,6 +149,8 @@ local function extractPlayerName(prefixText)
 	for _, player in ipairs(Players:GetPlayers()) do
 		if cleanText:find(player.Name, 1, true) then -- true для точного совпадения
 			return player.Name
+		elseif cleanText:find(player.DisplayName, 1, true) then
+			return player.Name
 		end
 	end
 
