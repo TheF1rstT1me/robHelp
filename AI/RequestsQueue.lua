@@ -126,21 +126,23 @@ end
 AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
 	if state then
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
-			local text = message.Text
-			local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
-			
-			if targetPlayer and targetPlayer ~= player then
-				local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
-			
-				if isCharacterVisible(playerCharacter) then
-					print(targetPlayer, text)
-					local result = InsertRequest(model, sysinst, text)
-					print("request result:", result)
-					if #Queue == 1 then
-						SendToGemini(Queue[1])
+			task.spawn(function()
+				local text = message.Text
+				local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
+
+				if targetPlayer and targetPlayer ~= player then
+					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+
+					if isCharacterVisible(playerCharacter) then
+						print(targetPlayer, text)
+						local result = InsertRequest(model, sysinst, text)
+						print("request result:", result)
+						if #Queue == 1 then
+							SendToGemini(Queue[1])
+						end
 					end
 				end
-			end
+			end)
 		end
 	else
 		TextChatService.OnIncomingMessage = nil
