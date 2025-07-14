@@ -192,8 +192,10 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 
 		local text = message.Text
 		local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
-
+		
 		if playerLockedName ~= "" and targetPlayer.Name ~= playerLockedName then return end;
+		print(`Принял сообщение от {targetPlayer.Name}: {text}`)
+			
 		if targetPlayer and targetPlayer ~= player then
 			local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 
