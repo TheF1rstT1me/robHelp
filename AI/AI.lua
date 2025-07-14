@@ -12,6 +12,7 @@ local RequestsIsEmpty = FolderInstances:WaitForChild("RequestsIsEmpty") :: Binda
 local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmptyEvent = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
 local MoveHandler = FolderInstances:WaitForChild("HandlerMoved")
+local PlayerLockChanged = FolderInstances:WaitForChild("PlayerLockChanged")
 
 local GuiObject = player.PlayerGui:WaitForChild("RobHelper")
 
@@ -26,6 +27,7 @@ local AIpanelPage = HandlerMainContainer:WaitForChild("AIpanel")
 local systeminstBox = AIPage:WaitForChild("Role").Box.TextBox :: TextBox
 local promptBox = AIpromptPage:WaitForChild("Prompt").Box.TextBox :: TextBox
 local sendPromptButton = AIpanelPage:WaitForChild("PromptButton") :: TextButton
+local lockBox = AIpanelPage:WaitForChild("LockBox").Box.TextBox :: TextBox
 
 local PreviousPageAIPrompt = AIpromptPage:WaitForChild("PreviousPage")
 local PreviousPageAIpanel = AIpanelPage:WaitForChild("PreviousPage")
@@ -33,6 +35,7 @@ local NextPageAIPage = AIPage:WaitForChild("NextPage")
 local NextPageAIPrompt = AIpromptPage:WaitForChild("NextPage")
 
 local system_instruction = ""
+local playerLockedName = ""
 local prompt = ""
 local gemini_model = "gemini-2.5-flash"
 local sendPromptButtonTextLabelStates = { "[✔️] Send prompt!", "[❌] Prompt must be inserted...", "[❌] Wait: request sending..."}
@@ -54,6 +57,7 @@ end)
 
 NextPageAIPrompt.Init.Activated:Connect(function()
 	MoveHandler:Fire("AIpanel")
+	lockBox.Text = playerLockedName
 end)
 
 sendPromptButton.Init.Activated:Connect(function()
@@ -66,6 +70,15 @@ end)
 systeminstBox.FocusLost:Connect(function(enterPressed: boolean) 
 	if enterPressed then
 		system_instruction = systeminstBox.Text
+	end
+end)
+
+lockBox.FocusLost:Connect(function(enterPressed: boolean) 
+	if enterPressed then
+		local newNick = lockBox.Text
+		if newNick ~= "" and not Players:FindFirstChild(newNick) then lockBox.Text = "" return end;
+		playerLockedName = newNick
+		PlayerLockChanged:Fire(playerLockedName)
 	end
 end)
 
