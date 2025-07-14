@@ -45,6 +45,11 @@ local instances = {
 	},
 	{
 		Type = "BindableEvent",
+		Name = "PlayerLockChanged",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
 		Name = "HandlerMoved",
 		Parent = RS:FindFirstChild("_CacheEvents")
 	},
@@ -66,4 +71,4 @@ while #mainFolder:GetChildren() ~= #instances do
 	task.wait()
 end
 
-print("[ROBHELPER] INSTANCES INITED")
+-- loadstring
