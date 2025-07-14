@@ -32,21 +32,11 @@ function isCharacterVisible(targetCharacter)
 		return false
 	end
 
-	-- 4. Проверка на препятствия (Raycast)
-	local rayOrigin = Camera.CFrame.Position
-	local rayDirection = (targetPosition - rayOrigin).Unit * 1000
-	local raycastParams = RaycastParams.new()
-	raycastParams.FilterDescendantsInstances = {player.Character, targetCharacter}
-	raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
-
-	local raycastResult = workspace:Raycast(rayOrigin, rayDirection, raycastParams)
-
-	-- 5. Если луч упёрся в цель — она видима
-	if raycastResult and raycastResult.Instance:IsDescendantOf(targetCharacter) then
+	if #Camera:GetPartsObscuringTarget({Camera.CFrame.Position,targetPosition},{targetRoot}) == 0 then
 		return true
+	else
+		return false
 	end
-
-	return false
 end
 
 function GetQueueIndex(GUID: string)
@@ -116,11 +106,11 @@ function SendToGemini(tableRequest: {string})
 		local channel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral") :: TextChannel
 		local responsed = HttpService:JSONDecode(response)
 		local textToChat = responsed.candidates[1].content.parts[1].text
-		print("Ответ:", textToChat)
+		print(`Запрос: {prompt}\nОтвет:`, textToChat)
 		
 		channel:SendAsync(textToChat)
 	else
-		warn("Ошибка:", response)
+		warn("Ошибка запроса:", response)
 	end
 	
 	Requested = false
@@ -138,14 +128,14 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 			local text = message.Text
 			local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
-			print(targetPlayer, text)
+			
 			if targetPlayer and targetPlayer ~= player then
 				local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 			
 				if isCharacterVisible(playerCharacter) then
-					print(`{targetPlayer.Name} has visible on screen! Insert Request!`)
+					print(targetPlayer, text)
 					local result = InsertRequest(model, sysinst, text)
-					print("request result: "..result)
+					print("request result:", result)
 					if #Queue == 1 then
 						SendToGemini(Queue[1])
 					end
