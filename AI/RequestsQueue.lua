@@ -46,7 +46,7 @@ function isCharacterVisible(targetCharacter)
 	end
 end
 
-function InsertRequest(model, sysinst, prompt, id: string?)
+function InsertRequest(model, sysinst, prompt)
 	if #Queue ~= 0 then
 		for _, tableRequest in pairs(Queue) do
 			if (tableRequest[2] == sysinst and tableRequest[3] == prompt) then
@@ -57,7 +57,6 @@ function InsertRequest(model, sysinst, prompt, id: string?)
 
 	local GUID = HttpService:GenerateGUID()
 	local newRequest = {model, sysinst, prompt, GUID}
-	if id then newRequest[5] = id end;
 	table.insert(Queue, newRequest)
 	
 	if not whileCoro then
@@ -174,18 +173,8 @@ AIGemini.Event:Connect(function(state: boolean, model_, sysinst_)
 		end
 		
 		if #Queue ~= 0 then
-			local indexesSelfPrompt = {}
-			for index, request in pairs(Queue) do
-				if typeof(request[5]) == "string" then
-					table.insert(indexesSelfPrompt, request)
-				end
-			end
-			
-			if #indexesSelfPrompt ~= 0 then
-				Queue = indexesSelfPrompt
-			else
-				Queue = {}
-			end
+			Queue = {}
+			RequestsEmpty:Fire()
 		end
 	end
 end)
@@ -218,5 +207,5 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 end
 
 SendRequest.Event:Connect(function(sysinst_, model_, prompt) 
-	InsertRequest(model_, sysinst_, prompt, "SELF_PROMPT")
+	InsertRequest(model_, sysinst_, prompt)
 end)
