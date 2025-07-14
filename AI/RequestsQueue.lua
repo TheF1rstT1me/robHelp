@@ -176,6 +176,7 @@ AIGemini.Event:Connect(function(state: boolean, model_, sysinst_)
 			Queue = {}
 			RequestsEmpty:Fire()
 		end
+		Requested = false
 	end
 end)
 
