@@ -166,7 +166,7 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 				
 				local text = message.Text
 				local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
-				print(targetPlayer)
+
 				if targetPlayer and targetPlayer ~= player then
 					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 
