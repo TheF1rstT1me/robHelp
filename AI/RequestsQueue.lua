@@ -74,6 +74,7 @@ function InsertRequest(model, sysinst, prompt)
 				end
 			end
 		end)
+		coroutine.resume(whileCoro)
 	end
 	
 	return true;
