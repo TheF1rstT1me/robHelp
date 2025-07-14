@@ -12,7 +12,7 @@ local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmpty = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
 local PlayerLockChanged = FolderInstances:WaitForChild("PlayerLockChanged") :: BindableEvent
 
-local playerLockedName = ""
+local playerLockedName, chatBotEnabled, modelForChatBot, sysinstForChatBot = "", false, "", ""
 local whileCoro = false
 local Requested = false
 local Queue = {}
@@ -46,15 +46,7 @@ function isCharacterVisible(targetCharacter)
 	end
 end
 
-function GetQueueIndex(GUID: string)
-	for index, table_ in pairs(Queue) do
-		if table_[4] == GUID then return index end; 
-	end
-	
-	return false
-end
-
-function InsertRequest(model, sysinst, prompt)
+function InsertRequest(model, sysinst, prompt, id: string?)
 	if #Queue ~= 0 then
 		for _, tableRequest in pairs(Queue) do
 			if (tableRequest[2] == sysinst and tableRequest[3] == prompt) then
@@ -65,6 +57,7 @@ function InsertRequest(model, sysinst, prompt)
 
 	local GUID = HttpService:GenerateGUID()
 	local newRequest = {model, sysinst, prompt, GUID}
+	if id then newRequest[5] = id end;
 	table.insert(Queue, newRequest)
 	
 	if not whileCoro then
@@ -90,7 +83,7 @@ function SendToGemini(tableRequest: {string})
 	if Requested then return end;
 	
 	local model, sysinst, prompt, GUID = table.unpack(tableRequest)
-	local Index = GetQueueIndex(GUID)
+	local Index = table.find(Queue, tableRequest)
 	
 	local data = {
 		contents = {
@@ -138,7 +131,12 @@ function SendToGemini(tableRequest: {string})
 	
 	Requested = false
 	
-	table.remove(Queue, Index)
+	if table.find(Queue, tableRequest) == Index then table.remove(Queue, Index)
+	else
+		local Index = table.find(Queue, tableRequest)
+		if not Index then return end;
+		table.remove(Queue, Index)
+	end;
 end
 
 local function extractPlayerName(prefixText)
@@ -160,38 +158,65 @@ end
 
 local lastTick, lastText = tick(), ""
 
-AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
+AIGemini.Event:Connect(function(state: boolean, model_, sysinst_) 
 	if state then
-		TextChatService.OnIncomingMessage = function(message: TextChatMessage) 
-			task.spawn(function()
-				if lastText ~= "" and lastText == message.Text then 
-					if tick() - lastTick < .7 then lastTick = tick() return end
-				end
-				
-				lastTick = tick()
-				lastText = message.Text
-				
-				local text = message.Text
-				local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
-				
-				if playerLockedName ~= "" and targetPlayer.Name ~= playerLockedName then return end;
-				if targetPlayer and targetPlayer ~= player then
-					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
-
-					if isCharacterVisible(playerCharacter) then
-						print(targetPlayer, text)
-						local result = InsertRequest(model, sysinst, text)
-						print("request result:", result)
-					end
-				end
-			end)
-		end
-	else
+		chatBotEnabled = true
+		modelForChatBot = model_
+		sysinstForChatBot = sysinst_
 		lastTick, lastText = tick(), ""
-		TextChatService.OnIncomingMessage = nil
+	else
+		chatBotEnabled = false
+		lastTick, lastText = tick(), ""
+		
+		if whileCoro then
+			coroutine.close(whileCoro)
+			whileCoro = false
+		end
+		
+		if #Queue ~= 0 then
+			local indexesSelfPrompt = {}
+			for index, request in pairs(Queue) do
+				if typeof(request[5]) == "string" then
+					table.insert(indexesSelfPrompt, request)
+				end
+			end
+			
+			if #indexesSelfPrompt ~= 0 then
+				Queue = indexesSelfPrompt
+			else
+				Queue = {}
+			end
+		end
 	end
 end)
 
-SendRequest.Event:Connect(function(sysinst, model, prompt) 
-	InsertRequest(model, sysinst, prompt)
+TextChatService.OnIncomingMessage = function(message: TextChatMessage) 
+	task.spawn(function()
+		if not chatBotEnabled then return end;
+		
+		if lastText ~= "" and lastText == message.Text then 
+			if tick() - lastTick < .7 then lastTick = tick() return end
+		end
+
+		lastTick = tick()
+		lastText = message.Text
+
+		local text = message.Text
+		local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
+
+		if playerLockedName ~= "" and targetPlayer.Name ~= playerLockedName then return end;
+		if targetPlayer and targetPlayer ~= player then
+			local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+
+			if isCharacterVisible(playerCharacter) then
+				print(targetPlayer, text)
+				local result = InsertRequest(modelForChatBot, sysinstForChatBot, text)
+				print("request result:", result)
+			end
+		end
+	end)
+end
+
+SendRequest.Event:Connect(function(sysinst_, model_, prompt) 
+	InsertRequest(model_, sysinst_, prompt, "SELF_PROMPT")
 end)
