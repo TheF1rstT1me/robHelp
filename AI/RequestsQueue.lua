@@ -105,7 +105,7 @@ function SendToGemini(tableRequest: {string})
 		}
 	}
 	
-	local url = `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key=AIzaSyAkbmbooZg2VtYTEfBKXYc_YNpS0MG1OR4`
+	local url = `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key=AIzaSyDd6_7zeD3saiD5uu690vXBN-TBrgeqUrE`
 	Requested = true
 	
 	local success, response = pcall(function()
