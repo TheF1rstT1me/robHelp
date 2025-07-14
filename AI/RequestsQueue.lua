@@ -136,13 +136,28 @@ function SendToGemini(tableRequest: {string})
 	table.remove(Queue, Index)
 end
 
+local function extractPlayerName(prefixText)
+	-- Удаляем лишние символы (двоеточия, скобки и т.д.)
+	local cleanText = prefixText:gsub("[:%[%]]", ""):gsub("%s+", " ")
+
+	-- Ищем имя игрока среди онлайн-игроков
+	for _, player in ipairs(Players:GetPlayers()) do
+		if cleanText:find(player.Name, 1, true) then -- true для точного совпадения
+			return player.Name
+		end
+	end
+
+	-- Альтернативный вариант, если игрок не найден
+	return false
+end
+
 AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
 	if state then
-		connector = TextChatService.MessageReceived:Connect(function(message: TextChatMessage) 
+		TextChatService.OnIncomingMessage = function(message: TextChatMessage) 
 			task.spawn(function()
 				local text = message.Text
-				local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
-
+				local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
+				
 				if targetPlayer and targetPlayer ~= player then
 					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 
@@ -153,9 +168,9 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 					end
 				end
 			end)
-		end)
+		end
 	else
-		connector:Disconnect()
+		TextChatService.OnIncomingMessage = nil
 	end
 end)
 
