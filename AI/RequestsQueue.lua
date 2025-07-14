@@ -11,6 +11,7 @@ local RequestsIsEmpty = FolderInstances:WaitForChild("RequestsIsEmpty") :: Binda
 local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmpty = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
 
+local whileCoro = false
 local Requested = false
 local Queue = {}
 
@@ -59,7 +60,22 @@ function InsertRequest(model, sysinst, prompt)
 	local GUID = HttpService:GenerateGUID()
 	local newRequest = {model, sysinst, prompt, GUID}
 	table.insert(Queue, newRequest)
-
+	
+	if not whileCoro then
+		whileCoro = coroutine.create(function()
+			while true do
+				task.wait(.15)
+				if #Queue ~= 0 then
+					if not Requested then SendToGemini(Queue[1]) end;
+				else
+					RequestsEmpty:Fire()
+					whileCoro = false
+					break
+				end
+			end
+		end)
+	end
+	
 	return true;
 end
 
@@ -116,11 +132,6 @@ function SendToGemini(tableRequest: {string})
 	Requested = false
 	
 	table.remove(Queue, Index)
-	if #Queue == 0 then
-		RequestsEmpty:Fire()
-	else
-		SendToGemini(Queue[1])
-	end
 end
 
 AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
@@ -137,9 +148,6 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 						print(targetPlayer, text)
 						local result = InsertRequest(model, sysinst, text)
 						print("request result:", result)
-						if #Queue == 1 then
-							SendToGemini(Queue[1])
-						end
 					end
 				end
 			end)
@@ -151,8 +159,4 @@ end)
 
 SendRequest.Event:Connect(function(sysinst, model, prompt) 
 	InsertRequest(model, sysinst, prompt)
-	
-	if #Queue == 1 then
-		SendToGemini(Queue[1])
-	end
 end)
