@@ -11,6 +11,7 @@ local RequestsIsEmpty = FolderInstances:WaitForChild("RequestsIsEmpty") :: Binda
 local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmpty = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
 
+local connector = false
 local whileCoro = false
 local Requested = false
 local Queue = {}
@@ -137,7 +138,7 @@ end
 
 AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
 	if state then
-		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
+		connector = TextChatService.MessageReceived:Connect(function(message: TextChatMessage) 
 			task.spawn(function()
 				local text = message.Text
 				local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
@@ -152,9 +153,9 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 					end
 				end
 			end)
-		end
+		end)
 	else
-		TextChatService.OnIncomingMessage = nil
+		connector:Disconnect()
 	end
 end)
 
