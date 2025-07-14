@@ -122,7 +122,7 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 	if state then
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 			local text = message.Text
-			local targetPlayer = Players:FindFirstChild(message.TextSource) :: Player -- Источник (игрок или система) 
+			local targetPlayer = Players:FindFirstChild(message.TextSource.Name) :: Player -- Источник (игрок или система) 
 
 			if targetPlayer and targetPlayer ~= player then
 				local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
@@ -136,9 +136,6 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 						SendToGemini(Queue[1])
 					end
 				end
-
-			else
-				print(`[СИСТЕМА]: {text}`)
 			end
 		end
 	else
