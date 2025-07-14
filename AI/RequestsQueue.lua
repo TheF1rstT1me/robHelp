@@ -151,13 +151,22 @@ local function extractPlayerName(prefixText)
 	return false
 end
 
+local lastTick, lastText = tick(), ""
+
 AIGemini.Event:Connect(function(state: boolean, model, sysinst) 
 	if state then
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage) 
 			task.spawn(function()
+				if lastText ~= "" and lastText == message.Text then 
+					if tick() - lastTick < .7 then lastTick = tick() return end
+				end
+				
+				lastTick = tick()
+				lastText = message.Text
+				
 				local text = message.Text
 				local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
-				
+				print(targetPlayer)
 				if targetPlayer and targetPlayer ~= player then
 					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 
@@ -170,6 +179,7 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 			end)
 		end
 	else
+		lastTick, lastText = tick(), ""
 		TextChatService.OnIncomingMessage = nil
 	end
 end)
