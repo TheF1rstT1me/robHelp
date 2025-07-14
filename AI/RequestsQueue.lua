@@ -10,8 +10,9 @@ local AIGemini = FolderInstances:WaitForChild("AIGemini") :: BindableEvent
 local RequestsIsEmpty = FolderInstances:WaitForChild("RequestsIsEmpty") :: BindableFunction
 local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmpty = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
+local PlayerLockChanged = FolderInstances:WaitForChild("PlayerLockChanged") :: BindableEvent
 
-local connector = false
+local playerLockedName = ""
 local whileCoro = false
 local Requested = false
 local Queue = {}
@@ -19,6 +20,10 @@ local Queue = {}
 RequestsIsEmpty.OnInvoke = function()
 	return #Queue == 0
 end
+
+PlayerLockChanged.Event:Connect(function(newNick: string) 
+	playerLockedName = newNick
+end)
 
 function isCharacterVisible(targetCharacter)
 	-- 1. Получаем голову или HumanoidRootPart цели
@@ -166,7 +171,8 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 				
 				local text = message.Text
 				local targetPlayer = Players:FindFirstChild(extractPlayerName(message.PrefixText)) :: Player -- Источник (игрок или система) 
-
+				
+				if playerLockedName ~= "" and targetPlayer.Name ~= playerLockedName then return end;
 				if targetPlayer and targetPlayer ~= player then
 					local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 
