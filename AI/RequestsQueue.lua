@@ -2,11 +2,10 @@ local RS = game:GetService("ReplicatedStorage")
 local HttpService = game:GetService("HttpService")
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
-local player = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
+local player = Players.LocalPlayer
 
 local FolderInstances = RS:WaitForChild("_CacheEvents")
-local ToggleChanged = FolderInstances:WaitForChild("ToggleChanged") :: BindableEvent
 local AIGemini = FolderInstances:WaitForChild("AIGemini") :: BindableEvent
 local RequestsIsEmpty = FolderInstances:WaitForChild("RequestsIsEmpty") :: BindableFunction
 local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
@@ -50,6 +49,14 @@ function isCharacterVisible(targetCharacter)
 	return false
 end
 
+function GetQueueIndex(GUID: string)
+	for index, table_ in pairs(Queue) do
+		if table_[4] == GUID then return index end; 
+	end
+	
+	return false
+end
+
 function InsertRequest(model, sysinst, prompt)
 	if #Queue ~= 0 then
 		for _, tableRequest in pairs(Queue) do
@@ -64,14 +71,6 @@ function InsertRequest(model, sysinst, prompt)
 	table.insert(Queue, newRequest)
 
 	return true;
-end
-
-function GetQueueIndex(GUID: string)
-	for index, table_ in pairs(Queue) do
-		if table_[4] == GUID then return index end; 
-	end
-	
-	return false
 end
 
 function SendToGemini(tableRequest: {string})
@@ -139,14 +138,14 @@ AIGemini.Event:Connect(function(state: boolean, model, sysinst)
 		TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 			local text = message.Text
 			local targetPlayer = Players:GetPlayerByUserId(message.TextSource.UserId) :: Player -- Источник (игрок или система) 
-
-
+			print(targetPlayer, text)
 			if targetPlayer and targetPlayer ~= player then
 				local playerCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
 			
 				if isCharacterVisible(playerCharacter) then
-					InsertRequest(model, sysinst, text)
-					
+					print(`{targetPlayer.Name} has visible on screen! Insert Request!`)
+					local result = InsertRequest(model, sysinst, text)
+					print("request result: "..result)
 					if #Queue == 1 then
 						SendToGemini(Queue[1])
 					end
