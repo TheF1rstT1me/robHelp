@@ -137,7 +137,7 @@ function SendToGeminiHistory(newTableRequest: {string})
 	local model, sysinst, prompt, GUID = table.unpack(newTableRequest)
 	local Index = table.find(Queue, newTableRequest)
 	
-	if savedData == {} then
+	if next(savedData) == nil then
 		savedData = {
 			contents = {
 				{
