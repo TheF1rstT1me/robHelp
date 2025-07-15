@@ -28,7 +28,8 @@ local ToggleConstants = {
 	["ToggleBackpackUnlock"] = {},
 	["ToggleEnabled"] = {},
 	["ToggleFlashModel"] = {"ToggleSlowModel"},
-	["ToggleSlowModel"] = {"ToggleFlashModel"}
+	["ToggleSlowModel"] = {"ToggleFlashModel"},
+	["ToggleHistory"] = {}
 }
 
 local function getToggleCanOn(ToggleFrame: Frame)
