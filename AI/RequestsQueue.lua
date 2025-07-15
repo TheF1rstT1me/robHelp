@@ -167,7 +167,9 @@ function SendToGeminiHistory(newTableRequest: {string})
 		end
 		
 		table.insert(savedData.contents, {
-			text = prompt,
+			parts = {
+				{text = prompt}
+			},
 			role = "user"
 		})
 	end
@@ -195,7 +197,9 @@ function SendToGeminiHistory(newTableRequest: {string})
 		end
 		
 		table.insert(savedData.contents, {
-			text = textToChat,
+			parts = {
+				{text = textToChat}
+			},
 			role = "model"
 		})
 		
