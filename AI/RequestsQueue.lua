@@ -12,10 +12,49 @@ local SendRequest = FolderInstances:WaitForChild("SendRequest") :: BindableEvent
 local RequestsEmpty = FolderInstances:WaitForChild("RequestsEmpty") :: BindableEvent
 local PlayerLockChanged = FolderInstances:WaitForChild("PlayerLockChanged") :: BindableEvent
 
+local ChangedMessagesCount = FolderInstances:WaitForChild("ChangedMessagesCount") :: BindableEvent
+local ChangedAPIKey = FolderInstances:WaitForChild("ChangedAPIKey") :: BindableEvent
+local AIHistory = FolderInstances:WaitForChild("AIHistory") :: BindableEvent
+
 local playerLockedName, chatBotEnabled, modelForChatBot, sysinstForChatBot = "", false, "", ""
+local maxMessagesCount, API_Key, savedData, historyModeEnabled = 6, "", {}, false
+local lastTick, lastText = tick(), ""
 local whileCoro = false
 local Requested = false
 local Queue = {}
+
+ChangedAPIKey.Event:Connect(function(key) 
+	API_Key = key
+end)
+
+ChangedMessagesCount.Event:Connect(function(messages) 
+	maxMessagesCount = messages
+end)
+
+AIHistory.Event:Connect(function(state: boolean)
+	local flag = false
+	
+	if chatBotEnabled then
+		chatBotEnabled = false
+		lastTick, lastText = tick(), ""
+
+		if whileCoro then
+			coroutine.close(whileCoro)
+			whileCoro = false
+		end
+
+		clearQueue()
+		flag  =true
+	end
+	if flag then chatBotEnabled = true end;
+	
+	if state then
+		historyModeEnabled = true
+	else
+		historyModeEnabled = false
+		savedData = {}
+	end
+end)
 
 RequestsIsEmpty.OnInvoke = function()
 	return #Queue == 0
@@ -46,6 +85,14 @@ function isCharacterVisible(targetCharacter)
 	end
 end
 
+function clearQueue()
+	if #Queue ~= 0 then
+		Queue = {}
+		RequestsEmpty:Fire()
+	end
+	Requested = false
+end
+
 function InsertRequest(model, sysinst, prompt)
 	if #Queue ~= 0 then
 		for _, tableRequest in pairs(Queue) do
@@ -64,7 +111,13 @@ function InsertRequest(model, sysinst, prompt)
 			while true do
 				task.wait(.15)
 				if #Queue ~= 0 then
-					if not Requested then SendToGemini(Queue[1]) end;
+					if not Requested then
+						if not historyModeEnabled then
+							SendToGemini(Queue[1]) 
+						else
+							SendToGeminiHistory(Queue[1]) 
+						end
+					end;
 				else
 					RequestsEmpty:Fire()
 					whileCoro = false
@@ -78,8 +131,93 @@ function InsertRequest(model, sysinst, prompt)
 	return true;
 end
 
+function SendToGeminiHistory(newTableRequest: {string})
+	if Requested or API_Key == "" then return end;
+	
+	local model, sysinst, prompt, GUID = table.unpack(newTableRequest)
+	local Index = table.find(Queue, newTableRequest)
+	
+	if savedData == {} then
+		savedData = {
+			contents = {
+				{
+					parts = {
+						{
+							text = prompt
+						}
+					},
+					role = "user"
+				}
+			},
+			generationConfig = {
+				temperature = 1
+			},
+			systemInstruction = {
+				parts = {
+					{
+						text = (sysinst == "" and "Отвечай на русском. Используй слова, какие хочешь, но 100% подходящие в контекст ситуации, желательно: агрессивный стиль. Не используй ни капли форматирования по типу: *** или подобного!!! Старайся избегать плохих слов, но делай ответы интересными, до 1 или полтора предложения, в случае использования плохих слов - маскируй их под символы Unicode или подобное. " or "Отвечай на русском. Используй слова, какие хочешь, но 100% подходящие в контекст ситуации, желательно: агрессивный стиль. Не используй ни капли форматирования по типу: *** или подобного!!! Старайся избегать плохих слов, но делай ответы интересными, до 1 или полтора предложения, в случае использования плохих слов - маскируй их под символы Unicode или подобное. "..sysinst)
+					}
+				}
+			}
+		}
+	else
+		local countSaved = #savedData.contents
+		if countSaved == maxMessagesCount then
+			table.remove(savedData.contents, 1)
+		end
+		
+		table.insert(savedData.contents, {
+			text = prompt,
+			role = "user"
+		})
+	end
+	
+	local url = `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_Key}`
+	Requested = true
+
+	local success, response = pcall(function()
+		return game:HttpPost(
+			url,
+			HttpService:JSONEncode(savedData),
+			"application/json", -- contentType
+			false
+		)
+	end)
+
+	if success then
+		local channel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral") :: TextChannel
+		local responsed = HttpService:JSONDecode(response)
+		local textToChat = responsed.candidates[1].content.parts[1].text
+		
+		local countSaved = #savedData.contents
+		if countSaved == maxMessagesCount then
+			table.remove(savedData.contents, 1)
+		end
+		
+		table.insert(savedData.contents, {
+			text = textToChat,
+			role = "model"
+		})
+		
+		print(`запрос с историей: {prompt}\nОтвет:`, textToChat)
+
+		channel:SendAsync(textToChat)
+	else
+		warn("Ошибка запроса:", response)
+	end
+
+	Requested = false
+
+	if table.find(Queue, newTableRequest) == Index then table.remove(Queue, Index)
+	else
+		local Index = table.find(Queue, newTableRequest)
+		if not Index then return end;
+		table.remove(Queue, Index)
+	end;
+end
+
 function SendToGemini(tableRequest: {string})
-	if Requested then return end;
+	if Requested or API_Key == "" then return end;
 	
 	local model, sysinst, prompt, GUID = table.unpack(tableRequest)
 	local Index = table.find(Queue, tableRequest)
@@ -105,7 +243,7 @@ function SendToGemini(tableRequest: {string})
 		}
 	}
 	
-	local url = `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key=AIzaSyDd6_7zeD3saiD5uu690vXBN-TBrgeqUrE`
+	local url = `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_Key}`
 	Requested = true
 	
 	local success, response = pcall(function()
@@ -155,8 +293,6 @@ local function extractPlayerName(prefixText)
 	return false
 end
 
-local lastTick, lastText = tick(), ""
-
 AIGemini.Event:Connect(function(state: boolean, model_, sysinst_) 
 	if state then
 		chatBotEnabled = true
@@ -172,11 +308,7 @@ AIGemini.Event:Connect(function(state: boolean, model_, sysinst_)
 			whileCoro = false
 		end
 		
-		if #Queue ~= 0 then
-			Queue = {}
-			RequestsEmpty:Fire()
-		end
-		Requested = false
+		clearQueue()
 	end
 end)
 
