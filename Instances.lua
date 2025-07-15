@@ -38,6 +38,23 @@ local instances = {
 		Name = "SendRequest",
 		Parent = RS:FindFirstChild("_CacheEvents")
 	},
+	
+	{
+		Type = "BindableEvent",
+		Name = "AIHistory",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "ChangedAPIKey",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	{
+		Type = "BindableEvent",
+		Name = "ChangedMessagesCount",
+		Parent = RS:FindFirstChild("_CacheEvents")
+	},
+	
 	{
 		Type = "BindableEvent",
 		Name = "RequestsEmpty",
