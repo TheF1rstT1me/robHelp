@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 276 | Scripts: 0 | Modules: 0 | Tags: 0
+-- Instances: 310 | Scripts: 0 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- Teams.RobHelper
@@ -2715,7 +2715,6 @@ G2L["104"] = Instance.new("UICorner", G2L["103"]);
 
 -- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.LockBox.Box.TextBox
 G2L["105"] = Instance.new("TextBox", G2L["103"]);
-G2L["105"]["CursorPosition"] = -1;
 G2L["105"]["BorderSizePixel"] = 0;
 G2L["105"]["TextWrapped"] = true;
 G2L["105"]["TextSize"] = 19;
@@ -2747,160 +2746,529 @@ G2L["106"]["Name"] = [[Example]];
 G2L["106"]["Position"] = UDim2.new(-0, 0, 0.99766, 0);
 
 
--- Teams.RobHelper.MainFrame.MainContainer.UIStroke
-G2L["107"] = Instance.new("UIStroke", G2L["1b"]);
-G2L["107"]["Thickness"] = 1.9;
-G2L["107"]["Color"] = Color3.fromRGB(142, 142, 142);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.NextPage
+G2L["107"] = Instance.new("Frame", G2L["dc"]);
+G2L["107"]["BorderSizePixel"] = 0;
+G2L["107"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["107"]["Size"] = UDim2.new(0.42861, 0, 0.14259, 0);
+G2L["107"]["Position"] = UDim2.new(0.50269, 0, 0.94619, 0);
+G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["107"]["Name"] = [[NextPage]];
 
 
--- Teams.RobHelper.MainFrame.Border
-G2L["108"] = Instance.new("Frame", G2L["2"]);
-G2L["108"]["BorderSizePixel"] = 0;
-G2L["108"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["108"]["Size"] = UDim2.new(0.06536, 0, 1, 0);
-G2L["108"]["Position"] = UDim2.new(0.24308, 0, -0, 0);
-G2L["108"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["108"]["Name"] = [[Border]];
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.NextPage.UICorner
+G2L["108"] = Instance.new("UICorner", G2L["107"]);
 
 
--- Teams.RobHelper.MainFrame.Border.UIStroke
-G2L["109"] = Instance.new("UIStroke", G2L["108"]);
-G2L["109"]["Thickness"] = 1.9;
-G2L["109"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.NextPage.TextLabel
+G2L["109"] = Instance.new("TextLabel", G2L["107"]);
+G2L["109"]["TextWrapped"] = true;
+G2L["109"]["BorderSizePixel"] = 0;
+G2L["109"]["TextSize"] = 14;
+G2L["109"]["TextScaled"] = true;
+G2L["109"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["109"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["109"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["109"]["BackgroundTransparency"] = 1;
+G2L["109"]["Size"] = UDim2.new(0.9324, 0, 0.78377, 0);
+G2L["109"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["109"]["Text"] = [[Next page -->]];
+G2L["109"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
 
 
--- Teams.RobHelper.MainFrame.Border.Label
-G2L["10a"] = Instance.new("TextLabel", G2L["108"]);
-G2L["10a"]["TextWrapped"] = true;
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.NextPage.Init
+G2L["10a"] = Instance.new("TextButton", G2L["107"]);
 G2L["10a"]["BorderSizePixel"] = 0;
+G2L["10a"]["TextTransparency"] = 1;
 G2L["10a"]["TextSize"] = 14;
-G2L["10a"]["TextScaled"] = true;
-G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["10a"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["10a"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
-G2L["10a"]["BackgroundTransparency"] = 1;
-G2L["10a"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
+G2L["10a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10a"]["BackgroundTransparency"] = 0.8;
+G2L["10a"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10a"]["Text"] = [[->]];
-G2L["10a"]["Rotation"] = 90;
-G2L["10a"]["Name"] = [[Label]];
-G2L["10a"]["Position"] = UDim2.new(-0.19981, 0, 0.01457, 0);
+G2L["10a"]["Text"] = [[]];
+G2L["10a"]["Name"] = [[Init]];
 
 
--- Teams.RobHelper.MainFrame.Border.Label
-G2L["10b"] = Instance.new("TextLabel", G2L["108"]);
-G2L["10b"]["TextWrapped"] = true;
-G2L["10b"]["BorderSizePixel"] = 0;
-G2L["10b"]["TextSize"] = 14;
-G2L["10b"]["TextScaled"] = true;
-G2L["10b"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["10b"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["10b"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
-G2L["10b"]["BackgroundTransparency"] = 1;
-G2L["10b"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
-G2L["10b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10b"]["Text"] = [[->]];
-G2L["10b"]["Rotation"] = -90;
-G2L["10b"]["Name"] = [[Label]];
-G2L["10b"]["Position"] = UDim2.new(-0.19981, 0, 0.90449, 0);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIpanel.NextPage.Init.UICorner
+G2L["10b"] = Instance.new("UICorner", G2L["10a"]);
 
 
--- Teams.RobHelper.MainFrame.UIAspectRatioConstraint
-G2L["10c"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
-G2L["10c"]["AspectRatio"] = 1.27;
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory
+G2L["10c"] = Instance.new("Frame", G2L["1d"]);
+G2L["10c"]["Visible"] = false;
+G2L["10c"]["BorderSizePixel"] = 0;
+G2L["10c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10c"]["Size"] = UDim2.new(1, 0, 0.85938, 0);
+G2L["10c"]["Position"] = UDim2.new(0, 0, 0.04219, 0);
+G2L["10c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10c"]["Name"] = [[AIhistory]];
+G2L["10c"]["BackgroundTransparency"] = 1;
 
 
--- Teams.RobHelper.MainFrame.Label
-G2L["10d"] = Instance.new("Frame", G2L["2"]);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.TextLabel
+G2L["10d"] = Instance.new("TextLabel", G2L["10c"]);
+G2L["10d"]["TextWrapped"] = true;
 G2L["10d"]["BorderSizePixel"] = 0;
-G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Size"] = UDim2.new(0.24447, 0, 0.18883, 0);
-G2L["10d"]["Position"] = UDim2.new(-0.00139, 0, 0, 0);
+G2L["10d"]["TextSize"] = 14;
+G2L["10d"]["TextScaled"] = true;
+G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["10d"]["TextColor3"] = Color3.fromRGB(176, 176, 176);
+G2L["10d"]["BackgroundTransparency"] = 1;
+G2L["10d"]["Size"] = UDim2.new(0.91521, 0, 0.14072, 0);
 G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Name"] = [[Label]];
-G2L["10d"]["BackgroundTransparency"] = 0.3;
+G2L["10d"]["Text"] = [[Gemini AI history]];
+G2L["10d"]["Position"] = UDim2.new(0.04, 0, -0.03213, 0);
 
 
--- Teams.RobHelper.MainFrame.Label.TextLabel
-G2L["10e"] = Instance.new("TextLabel", G2L["10d"]);
-G2L["10e"]["TextWrapped"] = true;
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.PreviousPage
+G2L["10e"] = Instance.new("Frame", G2L["10c"]);
 G2L["10e"]["BorderSizePixel"] = 0;
-G2L["10e"]["TextSize"] = 14;
-G2L["10e"]["TextScaled"] = true;
-G2L["10e"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["10e"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["10e"]["TextColor3"] = Color3.fromRGB(174, 174, 174);
-G2L["10e"]["BackgroundTransparency"] = 1;
-G2L["10e"]["Size"] = UDim2.new(0.81237, 0, 0.75532, 0);
+G2L["10e"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["10e"]["Size"] = UDim2.new(0.42861, 0, 0.14259, 0);
+G2L["10e"]["Position"] = UDim2.new(0.03977, 0, 0.94619, 0);
 G2L["10e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10e"]["Text"] = [[RobHelper]];
-G2L["10e"]["Position"] = UDim2.new(0.09058, 0, 0.11702, 0);
+G2L["10e"]["Name"] = [[PreviousPage]];
 
 
--- Teams.RobHelper.MainFrame.Label.UIStroke
-G2L["10f"] = Instance.new("UIStroke", G2L["10d"]);
-G2L["10f"]["Thickness"] = 1.9;
-G2L["10f"]["Color"] = Color3.fromRGB(142, 142, 142);
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.PreviousPage.UICorner
+G2L["10f"] = Instance.new("UICorner", G2L["10e"]);
 
 
--- Teams.RobHelper.MainFrame.Hide
-G2L["110"] = Instance.new("TextButton", G2L["2"]);
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.PreviousPage.TextLabel
+G2L["110"] = Instance.new("TextLabel", G2L["10e"]);
 G2L["110"]["TextWrapped"] = true;
-G2L["110"]["RichText"] = true;
 G2L["110"]["BorderSizePixel"] = 0;
 G2L["110"]["TextSize"] = 14;
 G2L["110"]["TextScaled"] = true;
-G2L["110"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
 G2L["110"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["110"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["110"]["ZIndex"] = 3;
+G2L["110"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["110"]["BackgroundTransparency"] = 1;
-G2L["110"]["Size"] = UDim2.new(0.04936, 0, 0.06293, 0);
+G2L["110"]["Size"] = UDim2.new(0.9324, 0, 0.78377, 0);
 G2L["110"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["110"]["Text"] = [[<-]];
-G2L["110"]["Name"] = [[Hide]];
-G2L["110"]["Position"] = UDim2.new(-0, 0, -0.00201, 0);
+G2L["110"]["Text"] = [[<-- Previous page]];
+G2L["110"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.PreviousPage.Init
+G2L["111"] = Instance.new("TextButton", G2L["10e"]);
+G2L["111"]["BorderSizePixel"] = 0;
+G2L["111"]["TextTransparency"] = 1;
+G2L["111"]["TextSize"] = 14;
+G2L["111"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["111"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["111"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["111"]["BackgroundTransparency"] = 0.8;
+G2L["111"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["111"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["111"]["Text"] = [[]];
+G2L["111"]["Name"] = [[Init]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.PreviousPage.Init.UICorner
+G2L["112"] = Instance.new("UICorner", G2L["111"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory
+G2L["113"] = Instance.new("Frame", G2L["10c"]);
+G2L["113"]["BorderSizePixel"] = 0;
+G2L["113"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["113"]["Size"] = UDim2.new(0.9301, 0, 0.14259, 0);
+G2L["113"]["Position"] = UDim2.new(0.04026, 0, 0.77453, 0);
+G2L["113"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["113"]["Name"] = [[ToggleHistory]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.UICorner
+G2L["114"] = Instance.new("UICorner", G2L["113"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.TextLabel
+G2L["115"] = Instance.new("TextLabel", G2L["113"]);
+G2L["115"]["TextWrapped"] = true;
+G2L["115"]["BorderSizePixel"] = 0;
+G2L["115"]["TextSize"] = 14;
+G2L["115"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["115"]["TextScaled"] = true;
+G2L["115"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["115"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["115"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["115"]["BackgroundTransparency"] = 1;
+G2L["115"]["Size"] = UDim2.new(0.67926, 0, 0.78377, 0);
+G2L["115"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["115"]["Text"] = [[Dialog history for chatbot]];
+G2L["115"]["Position"] = UDim2.new(0.02735, 0, 0.0998, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.Toggle
+G2L["116"] = Instance.new("Frame", G2L["113"]);
+G2L["116"]["BorderSizePixel"] = 0;
+G2L["116"]["BackgroundColor3"] = Color3.fromRGB(15, 62, 47);
+G2L["116"]["Size"] = UDim2.new(0.18421, 0, 0.58744, 0);
+G2L["116"]["Position"] = UDim2.new(0.76147, 0, 0.19646, 0);
+G2L["116"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["116"]["Name"] = [[Toggle]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.Toggle.UICorner
+G2L["117"] = Instance.new("UICorner", G2L["116"]);
+G2L["117"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.Toggle.Dot
+G2L["118"] = Instance.new("Frame", G2L["116"]);
+G2L["118"]["BorderSizePixel"] = 0;
+G2L["118"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["118"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["118"]["Size"] = UDim2.new(0.36736, 0, 0.70461, 0);
+G2L["118"]["Position"] = UDim2.new(0.29612, 0, 0.5, 0);
+G2L["118"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["118"]["Name"] = [[Dot]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.Toggle.Dot.UICorner
+G2L["119"] = Instance.new("UICorner", G2L["118"]);
+G2L["119"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.ToggleHistory.Toggle.Init
+G2L["11a"] = Instance.new("TextButton", G2L["116"]);
+G2L["11a"]["BorderSizePixel"] = 0;
+G2L["11a"]["TextTransparency"] = 1;
+G2L["11a"]["TextSize"] = 14;
+G2L["11a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11a"]["BackgroundTransparency"] = 1;
+G2L["11a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["11a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11a"]["Text"] = [[]];
+G2L["11a"]["Name"] = [[Init]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api
+G2L["11b"] = Instance.new("Frame", G2L["10c"]);
+G2L["11b"]["BorderSizePixel"] = 0;
+G2L["11b"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["11b"]["Size"] = UDim2.new(0.89614, 0, 0.22818, 0);
+G2L["11b"]["Position"] = UDim2.new(0.05521, 0, 0.14014, 0);
+G2L["11b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11b"]["Name"] = [[Api]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.UICorner
+G2L["11c"] = Instance.new("UICorner", G2L["11b"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.Lable
+G2L["11d"] = Instance.new("TextLabel", G2L["11b"]);
+G2L["11d"]["TextWrapped"] = true;
+G2L["11d"]["BorderSizePixel"] = 0;
+G2L["11d"]["TextSize"] = 14;
+G2L["11d"]["TextScaled"] = true;
+G2L["11d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["11d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11d"]["BackgroundTransparency"] = 1;
+G2L["11d"]["Size"] = UDim2.new(0.94209, 0, 0.4856, 0);
+G2L["11d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11d"]["Text"] = [[API Key]];
+G2L["11d"]["Name"] = [[Lable]];
+G2L["11d"]["Position"] = UDim2.new(0.02347, 0, -0.01501, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.Box
+G2L["11e"] = Instance.new("Frame", G2L["11b"]);
+G2L["11e"]["BorderSizePixel"] = 0;
+G2L["11e"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["11e"]["Size"] = UDim2.new(0.94482, 0, 0.43944, 0);
+G2L["11e"]["Position"] = UDim2.new(0.02759, 0, 0.47059, 0);
+G2L["11e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11e"]["Name"] = [[Box]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.Box.UICorner
+G2L["11f"] = Instance.new("UICorner", G2L["11e"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.Box.TextBox
+G2L["120"] = Instance.new("TextBox", G2L["11e"]);
+G2L["120"]["BorderSizePixel"] = 0;
+G2L["120"]["TextWrapped"] = true;
+G2L["120"]["TextSize"] = 19;
+G2L["120"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["120"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["120"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["120"]["PlaceholderText"] = [[insert]];
+G2L["120"]["Size"] = UDim2.new(0.95049, 0, 1, 0);
+G2L["120"]["Position"] = UDim2.new(0.03112, 0, 0, 0);
+G2L["120"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["120"]["Text"] = [[]];
+G2L["120"]["BackgroundTransparency"] = 1;
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Api.Example
+G2L["121"] = Instance.new("TextLabel", G2L["11b"]);
+G2L["121"]["TextWrapped"] = true;
+G2L["121"]["BorderSizePixel"] = 0;
+G2L["121"]["TextSize"] = 14;
+G2L["121"]["TextScaled"] = true;
+G2L["121"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["121"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["121"]["TextColor3"] = Color3.fromRGB(107, 107, 107);
+G2L["121"]["BackgroundTransparency"] = 1;
+G2L["121"]["Size"] = UDim2.new(0.96555, 0, 0.28689, 0);
+G2L["121"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["121"]["Text"] = [[*Insert valid api key from ai.studio]];
+G2L["121"]["Name"] = [[Example]];
+G2L["121"]["Position"] = UDim2.new(-0, 0, 0.99766, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages
+G2L["122"] = Instance.new("Frame", G2L["10c"]);
+G2L["122"]["BorderSizePixel"] = 0;
+G2L["122"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["122"]["Size"] = UDim2.new(0.89614, 0, 0.22818, 0);
+G2L["122"]["Position"] = UDim2.new(0.04749, 0, 0.46357, 0);
+G2L["122"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["122"]["Name"] = [[Messages]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.UICorner
+G2L["123"] = Instance.new("UICorner", G2L["122"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.Lable
+G2L["124"] = Instance.new("TextLabel", G2L["122"]);
+G2L["124"]["TextWrapped"] = true;
+G2L["124"]["BorderSizePixel"] = 0;
+G2L["124"]["TextSize"] = 14;
+G2L["124"]["TextScaled"] = true;
+G2L["124"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["124"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["124"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["124"]["BackgroundTransparency"] = 1;
+G2L["124"]["Size"] = UDim2.new(0.94209, 0, 0.4856, 0);
+G2L["124"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["124"]["Text"] = [[Max messages in history]];
+G2L["124"]["Name"] = [[Lable]];
+G2L["124"]["Position"] = UDim2.new(0.02347, 0, -0.01501, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.Box
+G2L["125"] = Instance.new("Frame", G2L["122"]);
+G2L["125"]["BorderSizePixel"] = 0;
+G2L["125"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["125"]["Size"] = UDim2.new(0.94482, 0, 0.43944, 0);
+G2L["125"]["Position"] = UDim2.new(0.02759, 0, 0.47059, 0);
+G2L["125"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["125"]["Name"] = [[Box]];
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.Box.UICorner
+G2L["126"] = Instance.new("UICorner", G2L["125"]);
+
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.Box.TextBox
+G2L["127"] = Instance.new("TextBox", G2L["125"]);
+G2L["127"]["BorderSizePixel"] = 0;
+G2L["127"]["TextWrapped"] = true;
+G2L["127"]["TextSize"] = 19;
+G2L["127"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["127"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["127"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["127"]["PlaceholderText"] = [[insert]];
+G2L["127"]["Size"] = UDim2.new(0.95049, 0, 1, 0);
+G2L["127"]["Position"] = UDim2.new(0.03112, 0, 0, 0);
+G2L["127"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["127"]["Text"] = [[]];
+G2L["127"]["BackgroundTransparency"] = 1;
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.HandlerMainContainer.AIhistory.Messages.Example
+G2L["128"] = Instance.new("TextLabel", G2L["122"]);
+G2L["128"]["TextWrapped"] = true;
+G2L["128"]["BorderSizePixel"] = 0;
+G2L["128"]["TextSize"] = 14;
+G2L["128"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["128"]["TextScaled"] = true;
+G2L["128"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["128"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["128"]["TextColor3"] = Color3.fromRGB(107, 107, 107);
+G2L["128"]["BackgroundTransparency"] = 1;
+G2L["128"]["Size"] = UDim2.new(0.96555, 0, 0.28689, 0);
+G2L["128"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["128"]["Text"] = [[*Only numbers and <= 6.]];
+G2L["128"]["Name"] = [[Example]];
+G2L["128"]["Position"] = UDim2.new(-0, 0, 0.99766, 0);
+
+
+-- Teams.RobHelper.MainFrame.MainContainer.UIStroke
+G2L["129"] = Instance.new("UIStroke", G2L["1b"]);
+G2L["129"]["Thickness"] = 1.9;
+G2L["129"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+
+-- Teams.RobHelper.MainFrame.Border
+G2L["12a"] = Instance.new("Frame", G2L["2"]);
+G2L["12a"]["BorderSizePixel"] = 0;
+G2L["12a"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["12a"]["Size"] = UDim2.new(0.06536, 0, 1, 0);
+G2L["12a"]["Position"] = UDim2.new(0.24308, 0, -0, 0);
+G2L["12a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12a"]["Name"] = [[Border]];
+
+
+-- Teams.RobHelper.MainFrame.Border.UIStroke
+G2L["12b"] = Instance.new("UIStroke", G2L["12a"]);
+G2L["12b"]["Thickness"] = 1.9;
+G2L["12b"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+
+-- Teams.RobHelper.MainFrame.Border.Label
+G2L["12c"] = Instance.new("TextLabel", G2L["12a"]);
+G2L["12c"]["TextWrapped"] = true;
+G2L["12c"]["BorderSizePixel"] = 0;
+G2L["12c"]["TextSize"] = 14;
+G2L["12c"]["TextScaled"] = true;
+G2L["12c"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["12c"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12c"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
+G2L["12c"]["BackgroundTransparency"] = 1;
+G2L["12c"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
+G2L["12c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12c"]["Text"] = [[->]];
+G2L["12c"]["Rotation"] = 90;
+G2L["12c"]["Name"] = [[Label]];
+G2L["12c"]["Position"] = UDim2.new(-0.19981, 0, 0.01457, 0);
+
+
+-- Teams.RobHelper.MainFrame.Border.Label
+G2L["12d"] = Instance.new("TextLabel", G2L["12a"]);
+G2L["12d"]["TextWrapped"] = true;
+G2L["12d"]["BorderSizePixel"] = 0;
+G2L["12d"]["TextSize"] = 14;
+G2L["12d"]["TextScaled"] = true;
+G2L["12d"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["12d"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12d"]["TextColor3"] = Color3.fromRGB(84, 84, 84);
+G2L["12d"]["BackgroundTransparency"] = 1;
+G2L["12d"]["Size"] = UDim2.new(1.3934, 0, 0.07633, 0);
+G2L["12d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12d"]["Text"] = [[->]];
+G2L["12d"]["Rotation"] = -90;
+G2L["12d"]["Name"] = [[Label]];
+G2L["12d"]["Position"] = UDim2.new(-0.19981, 0, 0.90449, 0);
+
+
+-- Teams.RobHelper.MainFrame.UIAspectRatioConstraint
+G2L["12e"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
+G2L["12e"]["AspectRatio"] = 1.27;
+
+
+-- Teams.RobHelper.MainFrame.Label
+G2L["12f"] = Instance.new("Frame", G2L["2"]);
+G2L["12f"]["BorderSizePixel"] = 0;
+G2L["12f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12f"]["Size"] = UDim2.new(0.24447, 0, 0.18883, 0);
+G2L["12f"]["Position"] = UDim2.new(-0.00139, 0, 0, 0);
+G2L["12f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12f"]["Name"] = [[Label]];
+G2L["12f"]["BackgroundTransparency"] = 0.3;
+
+
+-- Teams.RobHelper.MainFrame.Label.TextLabel
+G2L["130"] = Instance.new("TextLabel", G2L["12f"]);
+G2L["130"]["TextWrapped"] = true;
+G2L["130"]["BorderSizePixel"] = 0;
+G2L["130"]["TextSize"] = 14;
+G2L["130"]["TextScaled"] = true;
+G2L["130"]["BackgroundColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["130"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["130"]["TextColor3"] = Color3.fromRGB(174, 174, 174);
+G2L["130"]["BackgroundTransparency"] = 1;
+G2L["130"]["Size"] = UDim2.new(0.81237, 0, 0.75532, 0);
+G2L["130"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["130"]["Text"] = [[RobHelper]];
+G2L["130"]["Position"] = UDim2.new(0.09058, 0, 0.11702, 0);
+
+
+-- Teams.RobHelper.MainFrame.Label.UIStroke
+G2L["131"] = Instance.new("UIStroke", G2L["12f"]);
+G2L["131"]["Thickness"] = 1.9;
+G2L["131"]["Color"] = Color3.fromRGB(142, 142, 142);
+
+
+-- Teams.RobHelper.MainFrame.Hide
+G2L["132"] = Instance.new("TextButton", G2L["2"]);
+G2L["132"]["TextWrapped"] = true;
+G2L["132"]["RichText"] = true;
+G2L["132"]["BorderSizePixel"] = 0;
+G2L["132"]["TextSize"] = 14;
+G2L["132"]["TextScaled"] = true;
+G2L["132"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
+G2L["132"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["132"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["132"]["ZIndex"] = 3;
+G2L["132"]["BackgroundTransparency"] = 1;
+G2L["132"]["Size"] = UDim2.new(0.04936, 0, 0.06293, 0);
+G2L["132"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["132"]["Text"] = [[<-]];
+G2L["132"]["Name"] = [[Hide]];
+G2L["132"]["Position"] = UDim2.new(-0, 0, -0.00201, 0);
 
 
 -- Teams.RobHelper.Show
-G2L["111"] = Instance.new("Frame", G2L["1"]);
-G2L["111"]["Visible"] = false;
-G2L["111"]["BorderSizePixel"] = 0;
-G2L["111"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
-G2L["111"]["Size"] = UDim2.new(0.05954, 0, 0.16192, 0);
-G2L["111"]["Position"] = UDim2.new(-0.00071, 0, 0.42271, 0);
-G2L["111"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["111"]["Name"] = [[Show]];
-G2L["111"]["BackgroundTransparency"] = 0.65;
+G2L["133"] = Instance.new("Frame", G2L["1"]);
+G2L["133"]["Visible"] = false;
+G2L["133"]["BorderSizePixel"] = 0;
+G2L["133"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+G2L["133"]["Size"] = UDim2.new(0.05954, 0, 0.16192, 0);
+G2L["133"]["Position"] = UDim2.new(-0.00071, 0, 0.42271, 0);
+G2L["133"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["133"]["Name"] = [[Show]];
+G2L["133"]["BackgroundTransparency"] = 0.65;
 
 
 -- Teams.RobHelper.Show.UIAspectRatioConstraint
-G2L["112"] = Instance.new("UIAspectRatioConstraint", G2L["111"]);
-G2L["112"]["AspectRatio"] = 1.27;
+G2L["134"] = Instance.new("UIAspectRatioConstraint", G2L["133"]);
+G2L["134"]["AspectRatio"] = 1.27;
 
 
 -- Teams.RobHelper.Show.ShowButton
-G2L["113"] = Instance.new("TextButton", G2L["111"]);
-G2L["113"]["TextWrapped"] = true;
-G2L["113"]["RichText"] = true;
-G2L["113"]["BorderSizePixel"] = 0;
-G2L["113"]["TextSize"] = 14;
-G2L["113"]["TextScaled"] = true;
-G2L["113"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
-G2L["113"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["113"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["113"]["ZIndex"] = 4;
-G2L["113"]["BackgroundTransparency"] = 1;
-G2L["113"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["113"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["113"]["Text"] = [[-->]];
-G2L["113"]["Name"] = [[ShowButton]];
+G2L["135"] = Instance.new("TextButton", G2L["133"]);
+G2L["135"]["TextWrapped"] = true;
+G2L["135"]["RichText"] = true;
+G2L["135"]["BorderSizePixel"] = 0;
+G2L["135"]["TextSize"] = 14;
+G2L["135"]["TextScaled"] = true;
+G2L["135"]["TextColor3"] = Color3.fromRGB(135, 118, 112);
+G2L["135"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["135"]["FontFace"] = Font.new([[rbxassetid://12187365364]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["135"]["ZIndex"] = 4;
+G2L["135"]["BackgroundTransparency"] = 1;
+G2L["135"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["135"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["135"]["Text"] = [[-->]];
+G2L["135"]["Name"] = [[ShowButton]];
 
 
 -- Teams.RobHelper.Show.UIStroke
-G2L["114"] = Instance.new("UIStroke", G2L["111"]);
-G2L["114"]["Thickness"] = 1.9;
-G2L["114"]["Color"] = Color3.fromRGB(142, 142, 142);
+G2L["136"] = Instance.new("UIStroke", G2L["133"]);
+G2L["136"]["Thickness"] = 1.9;
+G2L["136"]["Color"] = Color3.fromRGB(142, 142, 142);
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/Instances.lua", true))() -- Bindable Events
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/robHelp/refs/heads/main/MainGui.lua", true))()
