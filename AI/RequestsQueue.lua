@@ -67,7 +67,7 @@ end)
 function isCharacterVisible(targetCharacter)
 	-- 1. Получаем голову или HumanoidRootPart цели
 	local target = targetCharacter:FindFirstChild("HumanoidRootPart")
-	local arm = targetCharacter:FindFirstChild("LeftArm") or targetCharacter:FindFirstChild("LeftUppperArm")
+	local arm = targetCharacter:FindFirstChild("LeftArm") or targetCharacter:FindFirstChild("LeftUpperArm")
 	local targetRoot = arm
 	if not targetRoot then return false end
 
