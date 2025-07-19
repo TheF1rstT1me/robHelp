@@ -66,7 +66,7 @@ end)
 
 function isCharacterVisible(targetCharacter)
 	-- 1. Получаем голову или HumanoidRootPart цели
-	local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
+	local targetRoot = targetCharacter:FindFirstChild("Head")
 	if not targetRoot then return false end
 
 	-- 2. Проверяем, находится ли цель в поле зрения камеры
