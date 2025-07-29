@@ -1,8 +1,8 @@
-# Представляю вашему вниманию специальную утилиту для ROBLOX
-## Для чего она нужна?
+# I present to your attention a special utility for ROBLOX
+## What is it for?
 
-> Малая часть того, что вы с ней сможете:
-> 1. Воспроизводить любые анимации на плейсах (Для всех игроков)!
-> 2. **Общаться с игроками с помощью Gemini AI!**
-> 3. Телепортироваться в любые точки на плейсах с помощью TP Tool! 
+> A small part of what you can do with it:
+> 1. Play any animations on the playlists (For all players)!
+> 2. **Communicate with players using Gemini AI!**
+> 3. Teleport to any point on the place using TP Tool! 
 
